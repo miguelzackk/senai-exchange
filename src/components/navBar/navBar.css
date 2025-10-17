@@ -1,0 +1,50 @@
+@import url("/src/styles/global.css");
+
+footer{
+display: flex;
+padding: 320px, 43px;
+width: 320.002px;
+height: 43px;
+justify-content: center;
+align-items: center;
+flex-shrink: 0; 
+}
+
+
+.container-icons{
+position: fixed;
+bottom: 0;
+padding: 230px, 27px;
+display: flex;
+justify-content: center;
+align-items: center;
+gap: 44px;
+}
+
+.home-icon{
+width: 27px;
+height: 27px;
+
+}
+
+.bell-icon{
+width: 26px;
+height: 26px;
+
+}
+
+.chat-icon{
+width: 24.5px;
+height: 24.5px;
+}
+
+.lens-icon{
+width: 20px;
+height: 20px;
+
+}
+
+/* @media screen {
+    
+} */
+
