@@ -8,6 +8,7 @@
   border-bottom: 1px solid #ddd;
   padding: 10px 20px;
   height: 60px;
+  width: 100%;
   box-sizing: border-box;
   transition: background 0.3s, color 0.3s;
 }
