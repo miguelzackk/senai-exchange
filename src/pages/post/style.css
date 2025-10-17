@@ -1,0 +1,141 @@
+.top-add-post {
+  display: flex;
+  padding: 10px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  align-self: stretch;
+}
+
+.top-add-post h1 {
+  color: #000;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 125%; /* 17.5px */
+  align-self: stretch;
+}
+
+.insert-infos-post {
+  display: flex;
+  padding: 10px 16px;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  flex: 1 0 0;
+  align-self: stretch;
+  background: var(--White-100, #e1e1e1);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+fieldset {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 8px;
+  align-self: stretch;
+}
+
+label {
+  color: #000;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 15px */
+  align-self: stretch;
+}
+
+input::placeholder {
+  color: var(--White-300, #bdbdbd);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 15px */
+}
+
+#title,
+#tags {
+  display: flex;
+  padding: 10px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+  background: var(--Branco---Secundary, #fff);
+}
+
+.input-wrapper {
+  display: flex;
+  padding: 5px 10px 10px 10px;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  border-radius: 10px;
+  background: var(--Branco---Secundary, #fff);
+  flex-direction: column;
+}
+
+#text {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  align-self: stretch;
+  background: var(--Branco---Secundary, #fff);
+}
+
+.icons {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  padding: 5px 10px;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid var(--White-100, #e1e1e1);
+}
+
+.btn-post {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  align-self: stretch;
+  padding: 46px 0;
+}
+
+.btn-post button {
+  display: flex;
+  padding: 4px 12px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  background: var(--Pantone-Pantone, #e30613);
+  color: var(--White-White, var(--Branco---Secundary, #fff));
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 15px */
+}
+
+#save-draw {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-self: stretch;
+  color: var(--Pantone-Pantone, #e30613);
+  text-align: center;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%; /* 15px */
+}
