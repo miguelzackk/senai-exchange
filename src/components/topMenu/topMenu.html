@@ -1,0 +1,47 @@
+<header class="top-menu">
+      <link rel="stylesheet" href="./src/styles/global.css">
+  <link rel="stylesheet" href="./src/components/topMenu/topMenu.css">
+  <div class="icon-left">
+    <button id="perfil-btn" class="icon-btn" aria-label="Perfil">
+      <img id="perfil-icon" src="./src/assets/images/perfil.svg" alt="Perfil">
+    </button>
+  </div>
+
+  <div class="logo">
+    <img id="logo-senai" src="./src/assets/images/logo-mini.svg" alt="Logo SENAI">
+  </div>
+
+  <div class="icon-right">
+    <button id="tema-escuro-toggle" class="icon-btn" aria-label="Alternar tema escuro">
+      <img id="tema" src="./src/assets/images/moon-icon.svg" alt="Tema Escuro">
+    </button>
+  </div>
+</header>
+<!--  trocar de tema -->
+<script>
+  const toggle = document.getElementById('tema-escuro-toggle');
+  const tema = document.getElementById('tema');
+  const perfilIcon = document.getElementById('perfil-icon');
+  const logoSenai = document.getElementById('logo-senai');
+
+  toggle.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+    const darkMode = document.body.classList.contains('dark-mode');
+    
+    tema.src = darkMode
+      ? './src/assets/images/sun-white-icon.svg'
+      : './src/assets/images/moon-icon.svg';
+
+    perfilIcon.src = darkMode
+      ? './src/assets/images/perfil-white-icon.svg'
+      : './src/assets/images/perfil.svg';
+
+    logoSenai.src = darkMode
+      ? './src/assets/images/logo-mini-white.svg'
+      : './src/assets/images/logo-mini.svg';
+
+    tema.alt = darkMode ? 'Tema Claro' : 'Tema Escuro';
+    perfilIcon.alt = darkMode ? 'Perfil (tema escuro)' : 'Perfil';
+    logoSenai.alt = darkMode ? 'Logo SENAI (tema escuro)' : 'Logo SENAI';
+  });
+</script>
