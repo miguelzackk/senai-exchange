@@ -1,8 +1,10 @@
 @import url("/src/styles/global.css");
 
+body{
+    transition: background 0.2s, transform 0.2s;
+}
 
 .wrapper{
-
 display: flex;
 padding: 10px 16px;
 flex-direction: column;
@@ -34,7 +36,6 @@ line-height: 125%;
 }
 
 .question-container > p{
-
 font-weight: 700;
-
 }
+
