@@ -22,7 +22,7 @@ align-items: center;
 gap: 4px;
 align-self: stretch;
 
-border-bottom: 1px solid var(--Battleship-Gray-200, #6C6C6C);
+border-bottom: 1px solid var(--gray-line-color);
 
 }
 
@@ -40,8 +40,8 @@ font-weight: 700;
 }
 
 a{
- color: #6C6C6C; 
- font-weight: 700;  
+ color: var(--black-tertiary-color); 
+ font-weight: 600;  
 }
 
 .link-hp-services{
@@ -51,9 +51,12 @@ gap: 6px;
 
 }
 
-body.dark-mode a{
+.link-hp-services > p{
+color: var(--gray-quartenary-color);
+}
 
-color: red;
+body.dark-mode a{
+color: var(--white-background-color);
 }
 
 
