@@ -26,7 +26,7 @@ border-bottom: 1px solid var(--Battleship-Gray-200, #6C6C6C);
 
 }
 
-p{
+p, a{
 font-family: Montserrat;
 font-size: 14px;
 font-style: normal;
@@ -38,4 +38,22 @@ line-height: 125%;
 .question-container > p{
 font-weight: 700;
 }
+
+a{
+ color: #6C6C6C; 
+ font-weight: 700;  
+}
+
+.link-hp-services{
+display: flex;
+flex-direction: row;
+gap: 6px;
+
+}
+
+body.dark-mode a{
+color: red;
+}
+
+
 
