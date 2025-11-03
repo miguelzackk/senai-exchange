@@ -18,8 +18,7 @@ flex-shrink: 0;
 }
 
 h3{
-
-color: var(--Black-Black, #000);
+color: var(--Black-tertiary-color);
 
 font-family: Montserrat;
 font-size: 14px;
@@ -29,8 +28,7 @@ line-height: 125%;
 }
 
 .page-top > p{
-
-    color: var(--Black-300, #2B2B2B);
+color: var(--Black-text-color);
 
 font-family: Montserrat;
 font-size: 12px;
@@ -49,7 +47,7 @@ gap: 10px;
 flex: 1 0 0;
 align-self: stretch;
 
-background: var(--White-100, #E1E1E1);
+background: var(--white-background-color);
 }
 
 .title{
@@ -67,7 +65,7 @@ flex-shrink: 0;
 }
 
 .title > p{
-color: var(--Black-200, #3D3D3D);
+color: var(--Black-title-color);
 text-align: center;
 
 
@@ -87,7 +85,7 @@ gap: 10px;
 align-self: stretch;
 
 border-radius: 10px;
-background: var(--Branco---Secundary, #FFF);
+background: var(--white-secundary-color);
 
 }
 
@@ -101,33 +99,33 @@ gap: 10px;
 color: #FFF;
 
 border-radius: 10px;
-background: var(--Pantone-Pantone, #E30613);
+background: var(--red-primary-color);
 
 }
 
 body.dark-mode .page-top{
-background-color: var(--Black-200, #3D3D3D);
-color: #E30613;
+background-color: var(--black-title-color);
+color: var(--red-primary-color);
 
 }
 
 body.dark-mode .page-top-title{
-    color: white;
+    color: var(--white-secundary-color);
 }
 
 body.dark-mode .page-top-text{
-color: rgb(237, 237, 237);
+color: var(--white-secundary-color);
 }
 
 body.dark-mode .questions{  
-background-color: #000;
+background-color: var(--Black-tertiary-color);
 
 }
 
 body.dark-mode .title > p{
-color: #E1E1E1;
+color: var(--white-background-color);
 }
 
 body.dark-mode .question-box{
-    background-color: var(--Black-200, #3D3D3D);
+    background-color: var(--black-title-color);
 }
