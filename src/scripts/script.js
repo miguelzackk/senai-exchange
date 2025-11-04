@@ -84,3 +84,44 @@ toggle.addEventListener("click", () => {
 
 
 });
+
+// SideBar Funcional
+(function () {
+      const drawer = document.getElementById("drawer");
+      const menuToggle = document.getElementById("menuToggle");
+      const mainContent = document.getElementById("mainContent");
+
+      function openDrawer() {
+        drawer.classList.add("open");
+        drawer.setAttribute("aria-hidden", "false");
+        document.body.classList.add("overlay");
+      }
+
+      function closeDrawer() {
+        drawer.classList.remove("open");
+        drawer.setAttribute("aria-hidden", "true");
+        document.body.classList.remove("overlay");
+      }
+
+      menuToggle.addEventListener("click", (e) => {
+        e.stopPropagation();
+        if (drawer.classList.contains("open")) closeDrawer();
+        else openDrawer();
+      });
+
+      // fechar ao clicar fora
+      document.addEventListener("click", (event) => {
+        if (
+          drawer.classList.contains("open") &&
+          !drawer.contains(event.target) &&
+          !menuToggle.contains(event.target)
+        ) {
+          closeDrawer();
+        }
+      });
+
+      // fechar com ESC
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && drawer.classList.contains("open")) closeDrawer();
+      });
+    })();

@@ -1,54 +1,78 @@
-<!-- aqui é a home - eu criei para que a vercel consiga puxar o index -->
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Senai Exchange</title>
-    <link rel="stylesheet" href="/src/styles/global.css" />
-    <link rel="stylesheet" href="/src/styles/styles.css" />
-  </head>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>sideBar</title>
+  <link rel="stylesheet" href="/src/pages/sideBar/style.css">
+  <link rel="stylesheet" href="/src/styles/global.css">
+</head>
+<body>
+  <!-- TOPO (TopMenu) -->
+ <header class="top-menu">
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/components/topMenu/topMenu.css" />
+  <div class="icon-left">
+    <button id="perfil-btn" class="icon-btn" aria-label="Perfil">
+      <img id="perfil-icon" src="/src/assets/images/perfil.svg" alt="Perfil" />
+    </button>
+  </div>
 
-  <body>
-    <div class="main-home">
-      <header class="top-menu">
-        <link rel="stylesheet" href="./src/styles/global.css" />
-        <link rel="stylesheet" href="./src/components/topMenu/topMenu.css" />
-        <div class="icon-left">
-          <button id="perfil-btn" class="icon-btn" aria-label="Perfil">
-            <img
-              id="perfil-icon"
-              src="./src/assets/images/perfil.svg"
-              alt="Perfil"
-            />
-          </button>
-        </div>
-  
-        <div class="logo">
-          <img
-            id="logo-senai"
-            src="./src/assets/images/logo-mini.svg"
-            alt="Logo SENAI"
-          />
-        </div>
-  
-        <div class="icon-right">
-          <button
-            id="tema-escuro-toggle"
-            class="icon-btn"
-            aria-label="Alternar tema escuro"
-          >
-            <img
-              id="tema"
-              src="./src/assets/images/moon-icon.svg"
-              alt="Tema Escuro"
-            />
-          </button>
-        </div>
-      </header>
-  
-      <main>
-        <div class="buttons-filter">
+  <div class="logo">
+    <img
+      id="logo-senai"
+      src="/src/assets/images/logo-mini.svg"
+      alt="Logo SENAI"/>
+  </div>
+
+  <div class="icon-right">
+    <button
+      id="tema-escuro-toggle"
+      class="icon-btn"
+      aria-label="Alternar tema escuro"
+    >
+      <img
+        id="tema"
+        src="/src/assets/images/moon-icon.svg"
+        alt="Tema Escuro"
+      />
+    </button>
+  </div>
+  <script src="/src/scripts/script.js"></script> 
+</header>
+
+
+    <!-- Menu Itens -->
+      <nav class="menu-links" role="navigation" aria-label="Menu principal">
+        <a href="#" class="menu-item">
+          <img src="/src/assets/images/user-photo-sideBar.svg" alt=""> <span>Perfil</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img src="/src/assets/images/pencil-24.svg" alt=""> <span>Rascunhos</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img src="/src/assets/images/save-sideaBar.svg" alt=""> <span>Favoritos</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img src="/src/assets/images/star-fill-24.svg" alt=""> <span>Destaques</span>
+        </a>
+        <a href="#" class="menu-item">
+          <img src="/src/assets/images/fire-24.svg" alt=""> <span>Em alta</span>
+        </a>
+      </nav>
+      <hr class="drawer-sep">
+
+      <!-- logout dentro do drawer (como na imagem) -->
+      <a href="#" class="logout drawer-logout">
+        <img src="/src/assets/images/sign-out.svg" alt=""> <span>Sair</span>
+      </a>
+    </div>
+  </aside>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="main-content" id="mainContent" tabindex="-1">
+    <section class="feed">
+      <div class="buttons-filter">
           <button type="button" class="tags" id="program">Programação</button>
           <button type="button" class="tags" id="c">C#</button>
           <button type="button" class="tags" id="console">Console</button>
@@ -195,23 +219,39 @@
             </button>
           </div>
         </div>
-      </main>
-    </div>
-    <footer>
-      <div class="btn-post">
-        <a href="/src/pages/post/index.html">
-          <button type="button" id="addpost">
-            <img
-              src="/src/assets/images/icon-add-post.svg"
-              alt="Adicionar post"
-            />
-          </button>
-        </a>
-      </div>
+    </section>
 
-      <div class="">
-        <!-- navbar -->
-      </div>
-    </footer>
-  </body>
+    <!-- Botão flutuante de nova postagem (exemplo da imagem) -->
+<div class="btn-post">
+  <button type="button" id="addpost">
+    <img src="/src/assets/images/icon-add-post.svg" alt="Adicionar post" />
+  </button>
+</div>
+  </main>
+
+  <!-- FOOTER FIXO (barra inferior) -->
+<footer>
+<!-- Links -->
+  <link rel="stylesheet" href="/src/styles/global.css">
+  <link rel="stylesheet" href="/src/components/navBar/navBar.css">
+
+<div class="container-icons">
+   <a href="/src/pages/post/index.html">
+    <img id="dark-theme-home" class="home-icons" src="/src/assets/images/home-icon.svg" alt="icone home para homepage">
+    </a>
+     <a href="/src/pages/post/index.html">
+    <img id="dark-theme-bell" class="bell-icon" src="/src/assets/images/bell-icon.svg" alt="icone de sino para notificações">
+    </a>
+    <a href="/src/pages/post/index.html">
+    <img id="dark-theme-chat" class="chat-icon" src="/src/assets/images/chat-icon.svg" alt="icone de chat para conversação">
+    </a>
+    <a href="/src/pages/post/index.html">
+    <img id="dark-theme-lens" class="lens-icon" src="/src/assets/images/lens-icon.svg" alt="icone de lupa para pesquisa">
+      </a>
+</div>
+<script src="/src/scripts/script.js"></script>
+</footer>
+
+  <script src="/src/scripts/script.js"></script>
+</body>
 </html>
