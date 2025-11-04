@@ -23,7 +23,7 @@
             />
           </button>
         </div>
-  
+
         <div class="logo">
           <img
             id="logo-senai"
@@ -31,7 +31,7 @@
             alt="Logo SENAI"
           />
         </div>
-  
+
         <div class="icon-right">
           <button
             id="tema-escuro-toggle"
@@ -52,29 +52,29 @@
         const tema = document.getElementById("tema");
         const perfilIcon = document.getElementById("perfil-icon");
         const logoSenai = document.getElementById("logo-senai");
-  
+
         toggle.addEventListener("click", () => {
           document.body.classList.toggle("dark-mode");
           const darkMode = document.body.classList.contains("dark-mode");
-  
+
           tema.src = darkMode
             ? "./src/assets/images/sun-white-icon.svg"
             : "./src/assets/images/moon-icon.svg";
-  
+
           perfilIcon.src = darkMode
             ? "./src/assets/images/perfil-white-icon.svg"
             : "./src/assets/images/perfil.svg";
-  
+
           logoSenai.src = darkMode
             ? "./src/assets/images/logo-mini-white.svg"
             : "./src/assets/images/logo-mini.svg";
-  
+
           tema.alt = darkMode ? "Tema Claro" : "Tema Escuro";
           perfilIcon.alt = darkMode ? "Perfil (tema escuro)" : "Perfil";
           logoSenai.alt = darkMode ? "Logo SENAI (tema escuro)" : "Logo SENAI";
         });
       </script>
-  
+
       <main>
         <div class="buttons-filter">
           <button type="button" class="tags" id="program">Programação</button>
@@ -90,7 +90,10 @@
           <div class="top-post">
             <div class="infos-post">
               <div class="perfil-post">
-                <img src="/src/assets/images/perfil.svg" alt="icone de perfil" />
+                <img
+                  src="/src/assets/images/perfil.svg"
+                  alt="icone de perfil"
+                />
                 <div class="infos-perfil">
                   <h6>Minnie Winnie</h6>
                   <p>09 setembro de 2025 11:14</p>
@@ -160,6 +163,7 @@
                 <img
                   src="/src/assets/images/user-persona.jpg"
                   alt="icone de perfil"
+                  style="border-radius: 100px; background-color: white"
                 />
                 <div class="infos-perfil">
                   <h6>Lyan Brito</h6>
