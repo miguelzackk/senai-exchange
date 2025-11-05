@@ -1,5 +1,7 @@
 /* css pessoal de cada página */
 /* @media (max-width: 500px) { */
+@import url(global.css);
+
 body {
   width: 100%;
   display: flex;
@@ -33,35 +35,35 @@ main {
   padding: 3px 0;
   justify-content: center;
   align-items: center;
-  border-bottom: 1px solid #e1e1e1;
+  border-bottom: 1px solid var(--white-background-color);
 }
 
 .tags {
   font-size: 7.23px;
   font-weight: 600;
   padding: 2px 10px;
-  color: white;
+  color: var(--white-secundary-color);
   border-radius: 1px;
 }
 
 #program {
-  background-color: #ea4128;
+  background-color: var(--orange-program-color);
 }
 
 #c {
-  background-color: #2d5ac1;
+  background-color: var(--blue-c-color);
 }
 
 #console {
-  background-color: #f8b652;
+  background-color: var(--yellow-console-color);
 }
 
 #java {
-  background-color: #f17b3d;
+  background-color: var(--orange-java-color);
 }
 
 #linux {
-  background-color: #9a1915;
+  background-color: var(--red-linux-color);
 }
 #filter-image {
   height: 13px;
@@ -75,7 +77,7 @@ main {
   align-items: center;
   gap: 4.364px;
   border-radius: 9.47px;
-  border: 1px solid #f2f3f5;
+  border: 1px solid var(--gray-border-color);
 }
 
 .top-post {
@@ -91,7 +93,7 @@ main {
   width: 280.318px;
   grid-row: 1 / span 1;
   grid-column: 1 / span 1;
-  color: #000;
+  color: var(--black-tertiary-color);
   font-size: 11.438px;
   font-style: normal;
   font-weight: 400;
@@ -119,7 +121,7 @@ main {
 }
 
 .infos-perfil p {
-  color: #000;
+  color: var(--black-tertiary-color);
   font-size: 7.576px;
   font-style: normal;
   font-weight: 400;
@@ -127,7 +129,7 @@ main {
 }
 
 .infos-perfil h5 {
-  color: #606770;
+  color: var(--gray-secondary-text-color);
   font-size: 11.364px;
   font-style: normal;
   font-weight: 400;
@@ -149,7 +151,7 @@ main {
   align-items: center;
   gap: 17.046px;
   align-self: stretch;
-  border-top: 0.947px solid #f2f3f5;
+  border-top: 0.947px solid var(--gray-border-color);
 }
 
 .like-post {
@@ -166,8 +168,8 @@ main {
   gap: 4px;
   padding: 2px 6px;
   border-radius: 12px;
-  background: #e1e1e1;
-  color: #000;
+  background: var(--white-background-color);
+  color: var(--black-tertiary-color);
   font-size: 6px;
   font-weight: 400;
   line-height: 1;
@@ -193,7 +195,7 @@ main {
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  border-top: 1px solid #f2f3f5;
+  border-top: 1px solid var(--gray-border-color);
   width: 100%;
 }
 
@@ -210,18 +212,19 @@ main {
   justify-content: center;
   align-items: center;
   border-radius: 0.607px;
-  color: var(--Branco---Secundary, #fff);
+  color: var(--white-secundary-color);
 
   font-size: 6.066px;
   font-style: normal;
   font-weight: 600;
-  line-height: 8.493px; /* 140% */
+  line-height: 8.493px;
 }
 
 footer {
   display: flex;
   width: 100%;
   flex-direction: column;
+  height: 99.19px;
   justify-content: center;
   align-items: flex-end;
   gap: 8px;
@@ -240,10 +243,128 @@ footer {
   height: 48.19px;
   flex-shrink: 0;
   border-radius: 50px;
-  background: var(--Pantone-485---Primary, #e30613);
+  background: var(--red-primary-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* } */
+
+body.dark-mode {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
+}
+
+body.dark-mode .main-home {
+  background-color: var(--dark-card-color);
+}
+
+body.dark-mode .post-containter {
+  background-color: var(--dark-card-color);
+  border: 1px solid var(--dark-border-color);
+}
+
+body.dark-mode .top-post h5 {
+  color: var(--white-soft-color);
+}
+
+body.dark-mode .infos-perfil h5,
+body.dark-mode .infos-perfil p {
+  color: var(--gray-light-text-color);
+}
+
+body.dark-mode .buttons-post,
+body.dark-mode .buttons-post-save {
+  background: var(--dark-border-color);
+  color: var(--white-soft-color);
+}
+
+body.dark-mode .buttons-post img,
+body.dark-mode .buttons-post-save img {
+  filter: invert(1);
+}
+
+body.dark-mode .tags,
+body.dark-mode .tags-post {
+  opacity: 0.9;
+  filter: brightness(1.2);
+}
+
+body.dark-mode .footer-post {
+  border-top: 1px solid var(--dark-border-color);
+}
+
+body.dark-mode footer {
+  background-color: var(--dark-card-color);
+}
+
+body.dark-mode #addpost {
+  background-color: var(--red-primary-color);
+  box-shadow: 0 0 8px var(--red-primary-transparent);
+}
+
+body.dark-mode main img[src$=".svg"],
+body.dark-mode main svg,
+body.dark-mode main svg * {
+  filter: invert(1) brightness(1.4) contrast(1.2);
+  stroke: var(--white-secundary-color) !important;
+  fill: var(--white-secundary-color) !important;
+}
+
+.navbar {
+  display: flex;
+  padding: 320px, 43px;
+  width: 100%;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-icons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 43px;
+  background-color: var(--white-secundary-color);
+
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.bell-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.chat-icon {
+  width: 24.5px;
+  height: 24.5px;
+}
+
+.lens-icon {
+  width: 20px;
+  height: 20px;
+}
+
+body.dark-mode .container-icons {
+  background: var(--dark-surface-color);
+}
+
+body.dark-mode .container-icons img {
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important;
+  background: none !important;
+}
+
+body.dark-mode .container-icons img {
+  filter: brightness(0) invert(1) !important;
+}

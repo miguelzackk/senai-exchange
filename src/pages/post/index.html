@@ -71,95 +71,132 @@
         logoSenai.alt = darkMode ? "Logo SENAI (tema escuro)" : "Logo SENAI";
       });
     </script>
-    <div class="top-add-post">
-      <img src="/src/assets/images/pencil-icon.svg" alt="Ícone de lápis" />
-      <h1>
-        Publique uma dúvida, um pedido de orientação ou materiais de estudo
-      </h1>
-    </div>
-    <div class="insert-infos-post">
-      <form action="" method="post">
-        <fieldset>
-          <label for="title">Qual é o título da sua publicação?</label>
-          <input type="text" placeholder="Digite aqui..." id="title" />
-        </fieldset>
-        <fieldset>
-          <label for="title">Qual é o título da sua publicação?</label>
-          <div class="input-wrapper">
-            <div class="icons">
-              <button type="button">
-                <img
-                  src="/src/assets/images/font-icon.svg"
-                  alt="Ícone de fonte"
-                />
-              </button>
-              <button type="button">
-                <img
-                  src="/src/assets/images/bold-icon.svg"
-                  alt="Ícone de negrito"
-                />
-              </button>
-              <button type="button">
-                <img
-                  src="/src/assets/images/italic-icon.svg"
-                  alt="Ícone de itálico"
-                />
-              </button>
-              <button type="button">
-                <img
-                  src="/src/assets/images/code-addpost-icon.svg"
-                  alt="Ícone de codígo"
-                />
-              </button>
-              <button type="button">
-                <img
-                  src="/src/assets/images/menu-icon.svg"
-                  alt="Ícone de menu"
-                />
-              </button>
-              <button type="button">
-                <img
-                  src="/src/assets/images/list-icon.svg"
-                  alt="Ícone de lista"
-                />
-              </button>
-              <button type="button">
-                <img
-                  src="/src/assets/images/mention-icon.svg"
-                  alt="Ícone de menção"
-                />
-              </button>
-              <button type="button">
-                <img
-                  src="/src/assets/images/link-icon.svg"
-                  alt="Ícone de link"
-                />
-              </button>
-            </div>
-            <input type="text" placeholder="Digite aqui..." id="text" />
-          </div>
-        </fieldset>
-        <fieldset>
-          <label for="title"
-            >Selecione as tags relacionadas à publicação:</label
-          >
-          <input
-            type="text"
-            placeholder="Exemplos: #html, #javascript..."
-            id="tags"
-          />
-        </fieldset>
-      </form>
-      <div class="btn-post">
-        <a href="/index.html"> <button type="button">Publicar</button></a>
+    <div class="all-page" style="display: flex; flex-direction: column;
+    justify-content: center;
+    align-items: center;">
+      <div class="top-add-post">
+        <img src="/src/assets/images/pencil-icon.svg" alt="Ícone de lápis" />
+        <h1 style="text-align: center">
+          Publique uma dúvida, um pedido de orientação ou materiais de estudo
+        </h1>
       </div>
-      <a href="/index.html"
-        ><button id="save-draw">Salvar como rascunho</button></a
-      >
+      <div class="insert-infos-post">
+        <form action="" method="post">
+          <fieldset>
+            <label for="title">Qual é o título da sua publicação?</label>
+            <input type="text" placeholder="Digite aqui..." id="title" />
+          </fieldset>
+          <fieldset id="text-post">
+            <label for="title">Qual é o título da sua publicação?</label>
+            <div class="input-wrapper">
+              <div class="icons">
+                <button type="button">
+                  <img
+                    src="/src/assets/images/font-icon.svg"
+                    alt="Ícone de fonte"
+                  />
+                </button>
+                <button type="button">
+                  <img
+                    src="/src/assets/images/bold-icon.svg"
+                    alt="Ícone de negrito"
+                  />
+                </button>
+                <button type="button">
+                  <img
+                    src="/src/assets/images/italic-icon.svg"
+                    alt="Ícone de itálico"
+                  />
+                </button>
+                <button type="button">
+                  <img
+                    src="/src/assets/images/code-addpost-icon.svg"
+                    alt="Ícone de codígo"
+                  />
+                </button>
+                <button type="button">
+                  <img
+                    src="/src/assets/images/menu-icon.svg"
+                    alt="Ícone de menu"
+                  />
+                </button>
+                <button type="button">
+                  <img
+                    src="/src/assets/images/list-icon.svg"
+                    alt="Ícone de lista"
+                  />
+                </button>
+                <button type="button">
+                  <img
+                    src="/src/assets/images/mention-icon.svg"
+                    alt="Ícone de menção"
+                  />
+                </button>
+                <button type="button">
+                  <img
+                    src="/src/assets/images/link-icon.svg"
+                    alt="Ícone de link"
+                  />
+                </button>
+              </div>
+              <input type="text" placeholder="Digite aqui..." id="text" />
+            </div>
+          </fieldset>
+          <fieldset>
+            <label for="title"
+              >Selecione as tags relacionadas à publicação:</label
+            >
+            <input
+              type="text"
+              placeholder="Exemplos: #html, #javascript..."
+              id="tags"
+            />
+          </fieldset>
+        </form>
+        <div class="btn-post">
+          <a href="/index.html"> <button type="button">Publicar</button></a>
+        </div>
+        <a href="/index.html"
+          ><button id="save-draw">Salvar como rascunho</button></a
+        >
+      </div>
     </div>
     <footer>
-      <div class="">
-        <!-- nav-bar -->
+      <div class="navbar">
+        <div class="container-icons">
+          <a href="/index.html">
+            <img
+              id="dark-theme-home"
+              class="home-icons"
+              src="/src/assets/images/home-icon.svg"
+              alt="icone home para homepage"
+            />
+          </a>
+          <a href="/src/pages/post/index.html">
+            <img
+              id="dark-theme-bell"
+              class="bell-icon"
+              src="/src/assets/images/bell-icon.svg"
+              alt="icone de sino para notificações"
+            />
+          </a>
+          <a href="/src/pages/post/index.html">
+            <img
+              id="dark-theme-chat"
+              class="chat-icon"
+              src="/src/assets/images/chat-icon.svg"
+              alt="icone de chat para conversação"
+            />
+          </a>
+          <a href="/src/pages/post/index.html">
+            <img
+              id="dark-theme-lens"
+              class="lens-icon"
+              src="/src/assets/images/lens-icon.svg"
+              alt="icone de lupa para pesquisa"
+            />
+          </a>
+        </div>
       </div>
     </footer>
   </body>

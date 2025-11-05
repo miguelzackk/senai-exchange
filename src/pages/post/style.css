@@ -1,3 +1,5 @@
+@import url(/src/styles/global.css);
+
 .top-add-post {
   display: flex;
   padding: 10px 16px;
@@ -5,6 +7,15 @@
   align-items: center;
   gap: 8px;
   align-self: stretch;
+}
+
+.all-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: calc(100vh - 43px);
+  box-sizing: border-box;
 }
 
 .top-add-post h1 {
@@ -105,7 +116,7 @@ input::placeholder {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  flex: 1 0 0;
+  flex: 0.8 0 0;
   align-self: stretch;
   padding: 46px 0;
 }
@@ -138,4 +149,137 @@ input::placeholder {
   font-style: normal;
   font-weight: 500;
   line-height: 125%; /* 15px */
+}
+
+footer {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 43px;
+  position: relative;
+  z-index: 10;
+}
+
+.container-icons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 43px;
+  background-color: white;
+
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.bell-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.chat-icon {
+  width: 24.5px;
+  height: 24.5px;
+}
+
+.lens-icon {
+  width: 20px;
+  height: 20px;
+}
+
+.container-icons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 43px;
+  background-color: #fff;
+  box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
+  transition: background 0.2s, transform 0.2s;
+  z-index: 1000;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode * {
+  color: #f1f1f1 !important;
+  border-color: #333 !important;
+}
+
+body.dark-mode .input-wrapper,
+body.dark-mode input,
+body.dark-mode textarea,
+body.dark-mode select {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+  border: 1px solid #333 !important;
+  border-radius: 8px;
+}
+
+body.dark-mode #text {
+  border: none !important;
+}
+
+body.dark-mode input::placeholder,
+body.dark-mode textarea::placeholder {
+  color: #aaa !important;
+}
+
+body.dark-mode .top-add-post,
+body.dark-mode .insert-infos-post,
+body.dark-mode form {
+  background-color: #1e1e1e !important;
+  color: #f1f1f1 !important;
+}
+
+body.dark-mode .btn-post button {
+  color: #fff !important;
+  box-shadow: 0 0 8px rgba(227, 6, 19, 0.5);
+  border: none;
+}
+
+body.dark-mode #save-draw {
+  color: var(--red-primary-color) !important;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode .container-icons {
+  background: #2b2b2b !important;
+}
+
+body.dark-mode .all-page img,
+body.dark-mode .all-page svg {
+  filter: invert(1) brightness(1.4) !important;
+}
+
+body,
+.container-icons,
+.all-page {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
