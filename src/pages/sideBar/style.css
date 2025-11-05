@@ -1,184 +1,220 @@
-/* === IMPORTAÇÕES DOS ESTILOS GLOBAIS === */
-@import url("../../styles/global.css");
-@import url("../../styles/styles.css");
-@import url("../../styles/library.css");
-@import url("/src/scripts/script.js");
+/* ===========================
+   Reset e Imports
+=========================== */
+@import url("/src/styles/global.css");
 
-/* === ESTILOS ESPECÍFICOS DA PÁGINA SIDEBAR === */
-
-/* RESET (herdado dos globais, aqui só reforço) */
-* { box-sizing: border-box; }
-html,body{ height:100%; margin:0; padding:0; font-family: 'Inter', sans-serif; }
-
-/* COR DE FUNDO / TIPOGRAFIA */
-body { background:#fff; color:#000; overflow-x:hidden; }
-
-/* TOPO */
-.top-menu {
-display: flex;
-padding: 10px 0;
-justify-content: center;
-align-items: center;
-gap: 90px;
-flex: 1 0 0;
-align-self: stretch;
-}
-
-.icon-btn { background:none; border:none; padding:6px; cursor:pointer; }
-.icon { width:24px; height:24px; display:block; }
-.logo { height:28px; }
-
-/* DRAWER */
-.drawer {
-display: flex;
-height: 567px;
-padding: 0 15px;
-flex-direction: column;
-justify-content: center;
-align-items: flex-start;
-flex-shrink: 0;
-}
-
-.drawer.open { left:0; }
-
-/* OVERLAY QUANDO ABERTO */
-body.overlay::before {
-  content:"";
-  position:fixed;
-  inset:0;
-  background:rgba(0,0,0,0.36);
-  z-index:1500;
-}
-
-/* PROFILE */
-.profile-top { 
-display: flex;
-padding-bottom: 54px;
-flex-direction: column;
-align-items: flex-start;
-gap: 18px;
-}
-.profile-left { 
-display: flex;
-padding-bottom: 54px;
-flex-direction: column;
-align-items: flex-start;
-gap: 18px;
-border-bottom: 1px solid var(--White-100, #E1E1E1);
-}
-.avatar { 
-width: 32px;
-height: 32px;
-flex-shrink: 0;
-border-radius: 32px;
-background: url(/src/assets/images/user-photo-sideBar.svg) lightgray 50% / cover no-repeat;
- }
-.user-texts h2{
-color: #000;
-font-family: Montserrat;
-font-size: 15px;
-font-style: normal;
-font-weight: 600;
-line-height: 14px; /* 93.333% */
-align-self: stretch;
-}
-.user-texts p{
-color: var(--Black-100, #515151);
-font-family: Montserrat;
-font-size: 10px;
-font-style: normal;
-font-weight: 400;
-line-height: 14px; /* 140% */
-align-self: stretch;
- }
-
-.settings-btn{ background:none; border:none; cursor:pointer; padding:6px; }
-.settings-btn img{ width:18px; height:18px; }
-
-/* MENU LINKS */
-.menu-links{ display:flex; flex-direction:column; gap:16px; margin-top:18px; }
-.menu-item{
-  display:flex; align-items:center; gap:12px; text-decoration:none; color:#111; font-size:15px; padding:6px 2px;
-}
-.menu-item img{ width:20px; height:20px; display:block; }
-.menu-item:hover{ color:#e53935; }
-
-/* SEPARADOR */
-.drawer-sep{ border:none; border-top:1px solid #ececec; margin:18px 0; }
-
-/* LOGOUT DENTRO DO DRAWER */
-.drawer-logout{ display:flex; align-items:center; gap:10px; text-decoration:none; color:#e53935; font-weight:600; }
-
-/* MAIN CONTENT & FAB */
-.main-content{ padding:18px; min-height:calc(100vh - 56px - 56px); /* top + footer heights */ }
-.fab{
-  position:fixed; right:18px; bottom:78px; /* acima do footer */
-  width:54px; height:54px; border-radius:50%; border:none; background:#e53935;
-  display:flex; align-items:center; justify-content:center; box-shadow:0 6px 18px rgba(229,57,53,0.28); cursor:pointer; z-index:1400;
-}
-.fab svg{ display:block; }
-
-/* FOOTER FIXO */
-.app-footer{
-  position:fixed;
-  left:0; right:0; bottom:0;
-  height:56px;
+/* ===========================
+   SIDEBAR
+=========================== */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: -280px;
+  width: 280px;
+  height: 100%;
   background: #fff;
-  border-top:1px solid #e6e6e6;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  padding:0 18px;
-  gap:8px;
-  z-index:1300;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
+  transition: left 0.3s ease;
+  z-index: 1001; /* sobrepõe o overlay */
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
 }
 
-.footer-item{
-  background:none;
-  border:none;
-  text-decoration:none;
-  color:#333;
-  display:flex;
-  align-items:center;
-  gap:8px;
-  font-size:14px;
-  cursor:pointer;
+.sidebar.open {
+  left: 0;
 }
 
-.footer-item img{ width:20px; height:20px; display:block; }
-
-/* Ajustes: Sair à esquerda, dois botões à direita (empacotados) */
-.footer-logout { color:#555; }
-.footer-bulb, .footer-search {
-  background:transparent;
-  border:none;
-  padding:8px;
+/* ===========================
+   Cabeçalho da Sidebar
+=========================== */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  border-bottom: 1px solid #e6e6e6;
+  position: relative;
+  height: 80px;
 }
 
-/* agrupar bulb e search à direita mantendo espaçamento */
-.app-footer {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
+.perfil-img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
 }
-.app-footer .left { display:flex; align-items:center; gap:8px; }
-.app-footer .right { display:flex; align-items:center; gap:8px; }
 
-.app-footer .left { order:1; }
-.app-footer .right { order:2; }
-
-/* MODO ESCURO (caso script.js adicione classe body.dark) */
-body.dark {
-  background:#0f0f0f; color:#eaeaea;
+.perfil-info {
+  flex: 1;
 }
-body.dark .drawer { background:#121212; box-shadow:2px 0 12px rgba(0,0,0,0.6); }
-body.dark .app-footer { background:#121212; border-top-color:#2b2b2b; }
-body.dark .menu-item, body.dark .drawer-logout, body.dark .footer-item { color:#eaeaea; }
-body.dark .menu-item:hover { color:#ff6b6b; }
 
-/* RESPONSIVIDADE */
-@media (min-width: 768px) {
-  .drawer { width:320px; left:-320px; }
-  .drawer.open { left:0; }
-  .fab { right:26px; bottom:88px; }
+.perfil-info h3 {
+  font-size: 16px;
+  margin: 0;
+  font-weight: 600;
+  color: #000;
+  line-height: 1.2;
+}
+
+.perfil-info p {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.close-btn {
+  position: absolute;
+  right: 16px;
+  top: 16px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.close-btn img {
+  width: 16px;
+  height: 16px;
+}
+
+/* ===========================
+   Navegação da Sidebar
+=========================== */
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  padding: 20px 0;
+}
+
+.sidebar-nav a {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  text-decoration: none;
+  color: #222;
+  font-size: 15px;
+  padding: 12px 20px;
+  transition: background 0.2s;
+  border: none;
+  background: none;
+  width: 100%;
+  text-align: left;
+}
+
+.sidebar-nav a:hover {
+  background: #f5f5f5;
+}
+
+.sidebar-nav a img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===========================
+   Rodapé da Sidebar
+=========================== */
+.sidebar-footer {
+  padding: 16px 20px;
+  border-top: 1px solid #e6e6e6;
+}
+
+.sidebar-footer .logout {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #4D4D4D;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.sidebar-footer .logout img {
+  width: 20px;
+  height: 20px;
+}
+
+/* ===========================
+   Overlay (fundo escurecido)
+=========================== */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+  backdrop-filter: blur(2px);
+  z-index: 1000;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* ===========================
+   Tema Escuro
+=========================== */
+body.dark-mode .sidebar {
+  background-color: #1e1e1e;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body.dark-mode .sidebar-header {
+  border-bottom: 1px solid #333;
+}
+
+body.dark-mode .perfil-info h3 {
+  color: #f1f1f1;
+}
+
+body.dark-mode .perfil-info p {
+  color: #aaa;
+}
+
+body.dark-mode .sidebar-nav a {
+  color: #e6e6e6;
+}
+
+body.dark-mode .sidebar-nav a:hover {
+  background-color: #2c2c2c;
+}
+
+body.dark-mode .sidebar-footer {
+  border-top: 1px solid #333;
+}
+
+body.dark-mode .sidebar-footer .logout {
+  color: #ff6b6b;
+}
+
+/* ===========================
+   Estado do Body
+=========================== */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ===========================
+   Responsividade
+=========================== */
+@media (max-width: 568px) {
+  .sidebar {
+    width: 100%;
+    left: -100%;
+  }
+  
+  .sidebar.open {
+    left: 0;
+  }
 }
