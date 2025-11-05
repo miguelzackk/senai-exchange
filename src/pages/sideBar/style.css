@@ -1,148 +1,132 @@
-/* ===========================
-   Reset e Imports
-=========================== */
 @import url("/src/styles/global.css");
 
-/* ===========================
-   SIDEBAR
-=========================== */
+/* ===== SIDEBAR (hamburger) ===== */
 .sidebar {
   position: fixed;
   top: 0;
-  left: -280px;
-  width: 280px;
-  height: 100%;
-  background: #fff;
+  left: -240px;
+  width: 240px;
+  height: 100vh;
+  background: var(--white-secundary-color);
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
   transition: left 0.3s ease;
-  z-index: 1001; /* sobrepõe o overlay */
+  z-index: 1001;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
+  justify-content: space-between;
 }
 
 .sidebar.open {
   left: 0;
 }
 
-/* ===========================
-   Cabeçalho da Sidebar
-=========================== */
+/* ===== Cabeçalho ===== */
 .sidebar-header {
   display: flex;
-  align-items: center;
-  gap: 12px;
+  justify-content: space-between;
+  align-items: flex-start;
   padding: 16px;
   border-bottom: 1px solid #e6e6e6;
   position: relative;
-  height: 80px;
+}
+
+.perfil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+  gap: 6px;
 }
 
 .perfil-img {
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
   border-radius: 50%;
   object-fit: cover;
 }
 
-.perfil-info {
-  flex: 1;
-}
-
-.perfil-info h3 {
-  font-size: 16px;
-  margin: 0;
+.perfil-container h3 {
+  font-size: 15px;
   font-weight: 600;
   color: #000;
-  line-height: 1.2;
+  margin: 0;
 }
 
-.perfil-info p {
+.perfil-container p {
   font-size: 13px;
   color: #666;
   margin: 0;
-  line-height: 1.2;
 }
 
 .close-btn {
-  position: absolute;
-  right: 16px;
-  top: 16px;
   background: none;
   border: none;
   cursor: pointer;
-  width: 24px;
-  height: 24px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  position: absolute;
+  right: 12px;
+  top: 12px;
 }
 
 .close-btn img {
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 }
 
-/* ===========================
-   Navegação da Sidebar
-=========================== */
+/* ===== Navegação ===== */
 .sidebar-nav {
   display: flex;
   flex-direction: column;
-  flex: 1;
-  padding: 20px 0;
+  padding: 10px 0;
 }
 
 .sidebar-nav a {
   display: flex;
   align-items: center;
   gap: 12px;
+  padding: 10px 20px;
+  color: var(--black-text-color);
+  font-size: 14px;
   text-decoration: none;
-  color: #222;
-  font-size: 15px;
-  padding: 12px 20px;
-  transition: background 0.2s;
-  border: none;
-  background: none;
-  width: 100%;
-  text-align: left;
+  transition: background 0.2s ease;
 }
 
 .sidebar-nav a:hover {
   background: #f5f5f5;
 }
 
-.sidebar-nav a img {
+.icon-menu {
   width: 20px;
   height: 20px;
 }
 
-/* ===========================
-   Rodapé da Sidebar
-=========================== */
+/* ===== Rodapé ===== */
 .sidebar-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   padding: 16px 20px;
   border-top: 1px solid #e6e6e6;
 }
 
-.sidebar-footer .logout {
+.sidebar-footer a {
   display: flex;
   align-items: center;
-  gap: 12px;
-  color: #4D4D4D;
+  gap: 10px;
   text-decoration: none;
-  font-weight: 500;
-  font-size: 15px;
 }
 
-.sidebar-footer .logout img {
-  width: 20px;
-  height: 20px;
+.logout {
+  color: #4D4D4D;
+  font-weight: 600;
 }
 
-/* ===========================
-   Overlay (fundo escurecido)
-=========================== */
+.support img {
+  width: 24px;
+  height: 24px;
+}
+
+/* ===== Overlay (escurecido) ===== */
 .overlay {
   position: fixed;
   top: 0;
@@ -153,7 +137,6 @@
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease;
-  backdrop-filter: blur(2px);
   z-index: 1000;
 }
 
@@ -162,24 +145,17 @@
   visibility: visible;
 }
 
-/* ===========================
-   Tema Escuro
-=========================== */
+/* ===== Tema Escuro ===== */
 body.dark-mode .sidebar {
   background-color: #1e1e1e;
-  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
 }
 
-body.dark-mode .sidebar-header {
-  border-bottom: 1px solid #333;
-}
-
-body.dark-mode .perfil-info h3 {
+body.dark-mode .perfil-container h3 {
   color: #f1f1f1;
 }
 
-body.dark-mode .perfil-info p {
-  color: #aaa;
+body.dark-mode .perfil-container p {
+  color: #b5b5b5;
 }
 
 body.dark-mode .sidebar-nav a {
@@ -194,26 +170,17 @@ body.dark-mode .sidebar-footer {
   border-top: 1px solid #333;
 }
 
-body.dark-mode .sidebar-footer .logout {
-  color: #ff6b6b;
+body.dark-mode .logout {
+  color: #ffffff;
 }
 
-/* ===========================
-   Estado do Body
-=========================== */
-body.menu-open {
-  overflow: hidden;
-}
-
-/* ===========================
-   Responsividade
-=========================== */
+/* ===== Responsividade ===== */
 @media (max-width: 568px) {
   .sidebar {
-    width: 100%;
-    left: -100%;
+    width: 220px;
+    left: -220px;
   }
-  
+
   .sidebar.open {
     left: 0;
   }

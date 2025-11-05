@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ============================
+
   // 🔹 Alternar Tema Escuro / Claro
-  // ============================
   const toggle = document.getElementById("tema-escuro-toggle");
   const tema = document.getElementById("tema");
   const perfilIcon = document.getElementById("perfil-icon");
@@ -48,29 +47,24 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // ============================
   // 🔹 Menu Lateral (Sidebar)
-  // ============================
-  const sidebar = document.getElementById("sidebar");
-  const overlay = document.getElementById("overlay");
-  const perfilBtn = document.getElementById("perfil-btn");
-  const closeBtn = document.getElementById("close-menu");
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+const perfilBtn = document.getElementById("perfil-btn");
+const closeBtn = document.getElementById("close-menu");
 
-  // Abre o menu
-  perfilBtn.addEventListener("click", () => {
-    sidebar.classList.add("open");
-    overlay.classList.add("active");
-  });
+perfilBtn.addEventListener("click", () => {
+  sidebar.classList.add("open");
+  overlay.classList.add("active");
+});
 
-  // Fecha o menu
-  closeBtn.addEventListener("click", () => {
-    sidebar.classList.remove("open");
-    overlay.classList.remove("active");
-  });
+closeBtn.addEventListener("click", () => {
+  sidebar.classList.remove("open");
+  overlay.classList.remove("active");
+});
 
-  // Fecha clicando fora do menu
-  overlay.addEventListener("click", () => {
-    sidebar.classList.remove("open");
-    overlay.classList.remove("active");
-  });
+overlay.addEventListener("click", () => {
+  sidebar.classList.remove("open");
+  overlay.classList.remove("active");
+});
 });
