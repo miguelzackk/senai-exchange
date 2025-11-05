@@ -222,6 +222,7 @@ footer {
   display: flex;
   width: 100%;
   flex-direction: column;
+  height: 99.19px;
   justify-content: center;
   align-items: flex-end;
   gap: 8px;
@@ -247,14 +248,13 @@ footer {
   justify-content: center;
 }
 
-/* 🌑 Dark Mode - Ajustes globais */
 body.dark-mode {
   background-color: #121212;
   color: #f1f1f1;
 }
 
 body.dark-mode .main-home {
-  background-color: #121212;
+  background-color: #1e1e1e;
 }
 
 body.dark-mode .post-containter {
@@ -293,7 +293,7 @@ body.dark-mode .footer-post {
 }
 
 body.dark-mode footer {
-  background-color: #121212;
+  background-color: #1e1e1e;
 }
 
 body.dark-mode #addpost {
@@ -309,4 +309,49 @@ body.dark-mode main svg * {
   fill: #fff !important;
 }
 
+.navbar {
+  display: flex;
+  padding: 320px, 43px;
+  width: 100%;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+}
 
+.container-icons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 43px;
+  background-color: white;
+
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.bell-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.chat-icon {
+  width: 24.5px;
+  height: 24.5px;
+}
+
+.lens-icon {
+  width: 20px;
+  height: 20px;
+}
+
+body.dark-mode .container-icons {
+  background: #2b2b2b;
+}
