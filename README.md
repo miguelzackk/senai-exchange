@@ -18,7 +18,6 @@ O projeto funciona como uma plataforma de interação entre alunos, permitindo t
 - [Como Executar](#-como-executar)
 - [Contribuição](#-contribuição)
 - [Equipe](#-equipe)
-- [Licença](#-licença)
 
 ---
 
