@@ -19,7 +19,7 @@
 }
 
 .top-add-post h1 {
-  color: #000;
+  color: var(--black-tertiary-color);
   font-size: 14px;
   font-style: normal;
   font-weight: 700;
@@ -35,7 +35,7 @@
   gap: 8px;
   flex: 1 0 0;
   align-self: stretch;
-  background: var(--White-100, #e1e1e1);
+  background: var(--white-background-color);
 }
 
 form {
@@ -55,7 +55,7 @@ fieldset {
 }
 
 label {
-  color: #000;
+  color: var(--black-tertiary-color);
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -64,7 +64,7 @@ label {
 }
 
 input::placeholder {
-  color: var(--White-300, #bdbdbd);
+  color: var(--gray-placeholder-color);
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -79,7 +79,7 @@ input::placeholder {
   gap: 10px;
   align-self: stretch;
   border-radius: 10px;
-  background: var(--Branco---Secundary, #fff);
+  background: var(--white-secundary-color);
 }
 
 .input-wrapper {
@@ -89,7 +89,7 @@ input::placeholder {
   gap: 10px;
   align-self: stretch;
   border-radius: 10px;
-  background: var(--Branco---Secundary, #fff);
+  background: var(--white-secundary-color);
   flex-direction: column;
 }
 
@@ -98,7 +98,7 @@ input::placeholder {
   align-items: flex-start;
   gap: 10px;
   align-self: stretch;
-  background: var(--Branco---Secundary, #fff);
+  background: var(--white-secundary-color);
 }
 
 .icons {
@@ -108,7 +108,7 @@ input::placeholder {
   padding: 5px 10px;
   align-items: center;
   gap: 10px;
-  border-bottom: 1px solid var(--White-100, #e1e1e1);
+  border-bottom: 1px solid var(--white-background-color);
 }
 
 .btn-post {
@@ -128,8 +128,8 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   border-radius: 10px;
-  background: var(--Pantone-Pantone, #e30613);
-  color: var(--White-White, var(--Branco---Secundary, #fff));
+  background: var(--red-primary-color);
+  color: var(--White-White, var(--white-secundary-color));
   text-align: center;
   font-size: 12px;
   font-style: normal;
@@ -143,7 +143,7 @@ input::placeholder {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  color: var(--Pantone-Pantone, #e30613);
+  color: var(--red-primary-color);
   text-align: center;
   font-size: 12px;
   font-style: normal;
@@ -180,7 +180,7 @@ footer {
   justify-content: space-evenly;
   width: 100%;
   height: 43px;
-  background-color: white;
+  background-color: var(--white-secundary-color);
 
   transition: background 0.2s, transform 0.2s;
 }
@@ -213,7 +213,7 @@ footer {
   align-items: center;
   width: 100%;
   height: 43px;
-  background-color: #fff;
+  background-color: var(--white-secundary-color);
   box-shadow: 0 -1px 3px rgba(0, 0, 0, 0.1);
   transition: background 0.2s, transform 0.2s;
   z-index: 1000;
@@ -221,21 +221,21 @@ footer {
 
 body.dark-mode {
   background-color: #121212;
-  color: #f1f1f1 !important;
+  color: var(--dark-text-color) !important;
 }
 
 body.dark-mode * {
-  color: #f1f1f1 !important;
-  border-color: #333 !important;
+  color: var(--dark-text-color) !important;
+  border-color: var(--dark-border-color) !important;
 }
 
 body.dark-mode .input-wrapper,
 body.dark-mode input,
 body.dark-mode textarea,
 body.dark-mode select {
-  background-color: #1e1e1e !important;
-  color: #f1f1f1 !important;
-  border: 1px solid #333 !important;
+  background-color: var(--dark-card-color) !important;
+  color: var(--dark-text-color) !important;
+  border: 1px solid var(--dark-border-color) !important;
   border-radius: 8px;
 }
 
@@ -245,19 +245,19 @@ body.dark-mode #text {
 
 body.dark-mode input::placeholder,
 body.dark-mode textarea::placeholder {
-  color: #aaa !important;
+  color: var(--gray-muted-color) !important;
 }
 
 body.dark-mode .top-add-post,
 body.dark-mode .insert-infos-post,
 body.dark-mode form {
-  background-color: #1e1e1e !important;
-  color: #f1f1f1 !important;
+  background-color: var(--dark-card-color) !important;
+  color: var(--dark-text-color) !important;
 }
 
 body.dark-mode .btn-post button {
-  color: #fff !important;
-  box-shadow: 0 0 8px rgba(227, 6, 19, 0.5);
+  color: var(--white-secundary-color) !important;
+  box-shadow: 0 0 8px var(--red-primary-transparent);
   border: none;
 }
 
@@ -266,11 +266,11 @@ body.dark-mode #save-draw {
 }
 
 body.dark-mode footer {
-  background-color: #1e1e1e !important;
+  background-color: var(--dark-card-color) !important;
 }
 
 body.dark-mode .container-icons {
-  background: #2b2b2b !important;
+  background: var(--dark-surface-color) !important;
 }
 
 body.dark-mode .all-page img,
@@ -282,4 +282,19 @@ body,
 .container-icons,
 .all-page {
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+body.dark-mode .container-icons {
+  background: var(--dark-surface-color);
+}
+
+body.dark-mode .container-icons img {
+  filter: none !important;
+  -webkit-filter: none !important;
+  mix-blend-mode: normal !important;
+  background: none !important;
+}
+
+body.dark-mode .container-icons img {
+  filter: brightness(0) invert(1) !important;
 }
