@@ -12,6 +12,7 @@ const questionIcon = document.querySelector(".dark-theme-question");
 const bookIcon = document.getElementById("dark-theme-book");
 const pencilIcon = document.getElementById("dark-theme-pencil");
 const searchIcon = document.getElementById("dark-theme-search");
+const tagIcon = document.getElementById("dark-theme-tag");
 
 toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
@@ -77,6 +78,12 @@ toggle.addEventListener("click", () => {
     searchIcon.src = darkMode
       ? "/src/assets/images/lens-white-icon.svg"
       : "/src/assets/images/search-icon.svg";
+
+	// -- Tags Page --
+  if (tagIcon)
+    tagIcon.src = darkMode
+      ? "/src/assets/images/tag-white-icon.svg"
+      : "/src/assets/images/tag-icon.svg";
 
   tema.alt = darkMode ? "Tema Claro" : "Tema Escuro";
   perfilIcon.alt = darkMode ? "Perfil (tema escuro)" : "Perfil";
