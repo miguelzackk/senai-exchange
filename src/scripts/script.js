@@ -8,7 +8,7 @@ const homeIcon = document.getElementById("dark-theme-home");
 const bellIcon = document.getElementById("dark-theme-bell");
 const chatIcon = document.getElementById("dark-theme-chat");
 const lensIcon = document.getElementById("dark-theme-lens");
-const questionIcon = document.getElementById("dark-theme-question");
+const questionIcon = document.querySelector(".dark-theme-question");
 const bookIcon = document.getElementById("dark-theme-book");
 const pencilIcon = document.getElementById("dark-theme-pencil");
 const searchIcon = document.getElementById("dark-theme-search");
@@ -84,3 +84,5 @@ toggle.addEventListener("click", () => {
 
 
 });
+
+

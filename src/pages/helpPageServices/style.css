@@ -97,10 +97,16 @@ justify-content: center;
 align-items: center;
 gap: 10px;
 color: #FFF;
+cursor: pointer;
 
 border-radius: 10px;
 background: var(--red-primary-color);
+transition:  background-color 0.3s;
+}
 
+button:hover{
+    
+    background-color: var(--orange-java-color);
 }
 
 body.dark-mode .page-top{
@@ -127,5 +133,10 @@ color: var(--white-background-color);
 }
 
 body.dark-mode .question-box{
-    background-color: var(--black-title-color);
+    background-color: var(  --dark-border-color);
 }
+
+body.dark-mode .dark-theme-question{
+filter: invert();
+
+} 
