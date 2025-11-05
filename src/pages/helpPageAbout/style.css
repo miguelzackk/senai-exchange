@@ -1,63 +1,57 @@
 @import url("/src/styles/global.css");
 
-body{
-    transition: background 0.2s, transform 0.2s;
+body {
+  transition: background 0.2s, transform 0.2s;
 }
 
-.wrapper{
-display: flex;
-padding: 10px 16px;
-flex-direction: column;
-align-items: flex-start;
-gap: 10px;
-flex: 1 0 0;
-align-self: stretch;
-
+.wrapper {
+  display: flex;
+  padding: 10px 16px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  flex: 1 0 0;
+  align-self: stretch;
 }
 
-.question-container{
-display: flex;
-padding: 4px 0;
-align-items: center;
-gap: 4px;
-align-self: stretch;
+.question-container {
+  display: flex;
+  padding: 4px 0;
+  align-items: center;
+  gap: 4px;
+  align-self: stretch;
 
-border-bottom: 1px solid var(--gray-line-color);
-
+  border-bottom: 1px solid var(--gray-line-color);
 }
 
-p, a{
-font-family: Montserrat;
-font-size: 14px;
-font-style: normal;
-font-weight: 500;
-line-height: 125%; 
-
+p,
+a {
+  font-family: Montserrat;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 125%;
 }
 
-.question-container > p{
-font-weight: 700;
+.question-container > p {
+  font-weight: 700;
 }
 
-a{
- color: var(--black-tertiary-color); 
- font-weight: 600;  
+a {
+  color: var(--black-tertiary-color);
+  font-weight: 600;
 }
 
-.link-hp-services{
-display: flex;
-flex-direction: row;
-gap: 6px;
-
+.link-hp-services {
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
 }
 
-.link-hp-services > p{
-color: var(--gray-quartenary-color);
+.link-hp-services > p {
+  color: var(--gray-quartenary-color);
 }
 
-body.dark-mode a{
-color: var(--white-background-color);
+body.dark-mode a {
+  color: var(--white-background-color);
 }
-
-
-
