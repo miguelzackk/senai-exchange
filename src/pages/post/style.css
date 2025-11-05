@@ -24,7 +24,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 125%; /* 17.5px */
-  align-self: stretch;
+  text-align: center;
 }
 
 .insert-infos-post {

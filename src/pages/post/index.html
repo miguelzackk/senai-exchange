@@ -43,40 +43,18 @@
         </button>
       </div>
     </header>
-    <!--  trocar de tema -->
-    <script>
-      const toggle = document.getElementById("tema-escuro-toggle");
-      const tema = document.getElementById("tema");
-      const perfilIcon = document.getElementById("perfil-icon");
-      const logoSenai = document.getElementById("logo-senai");
-
-      toggle.addEventListener("click", () => {
-        document.body.classList.toggle("dark-mode");
-        const darkMode = document.body.classList.contains("dark-mode");
-
-        tema.src = darkMode
-          ? "/src/assets/images/sun-white-icon.svg"
-          : "/src/assets/images/moon-icon.svg";
-
-        perfilIcon.src = darkMode
-          ? "/src/assets/images/perfil-white-icon.svg"
-          : "/src/assets/images/perfil.svg";
-
-        logoSenai.src = darkMode
-          ? "/src/assets/images/logo-mini-white.svg"
-          : "/src/assets/images/logo-mini.svg";
-
-        tema.alt = darkMode ? "Tema Claro" : "Tema Escuro";
-        perfilIcon.alt = darkMode ? "Perfil (tema escuro)" : "Perfil";
-        logoSenai.alt = darkMode ? "Logo SENAI (tema escuro)" : "Logo SENAI";
-      });
-    </script>
-    <div class="all-page" style="display: flex; flex-direction: column;
-    justify-content: center;
-    align-items: center;">
+    <div
+      class="all-page"
+      style="
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      "
+    >
       <div class="top-add-post">
         <img src="/src/assets/images/pencil-icon.svg" alt="Ícone de lápis" />
-        <h1 style="text-align: center">
+        <h1>
           Publique uma dúvida, um pedido de orientação ou materiais de estudo
         </h1>
       </div>
@@ -199,5 +177,6 @@
         </div>
       </div>
     </footer>
+    <script src="/src/scripts/script.js"></script>
   </body>
 </html>

@@ -142,6 +142,7 @@ main {
 .perfil-post img {
   width: 22.728px;
   height: 22.728px;
+  border-radius: 100px;
 }
 
 .footer-post {
