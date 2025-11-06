@@ -13,6 +13,7 @@ const bookIcon = document.getElementById("dark-theme-book");
 const pencilIcon = document.getElementById("dark-theme-pencil");
 const searchIcon = document.getElementById("dark-theme-search");
 const tagIcon = document.getElementById("dark-theme-tag");
+const lockIcon = document.getElementById("dark-theme-lock");
 
 toggle.addEventListener("click", () => {
   document.body.classList.toggle("dark-mode");
@@ -84,6 +85,12 @@ toggle.addEventListener("click", () => {
     tagIcon.src = darkMode
       ? "/src/assets/images/tag-white-icon.svg"
       : "/src/assets/images/tag-icon.svg";
+
+	// -- Privacy Policy Page --
+  if (lockIcon)
+    lockIcon.src = darkMode
+      ? "/src/assets/images/lock-white-icon.svg"
+      : "/src/assets/images/lock-icon.svg";
 
   tema.alt = darkMode ? "Tema Claro" : "Tema Escuro";
   perfilIcon.alt = darkMode ? "Perfil (tema escuro)" : "Perfil";

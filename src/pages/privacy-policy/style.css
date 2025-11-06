@@ -1,0 +1,106 @@
+/* || Page styles */
+
+main {
+	height: 100vh;
+}
+
+/* || Heading */
+
+h1 {
+	color: var(--black-tertiary-color);
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 700;
+	align-self: center;
+}
+
+.page-heading {
+	display: flex;
+	flex-direction: column;
+	padding: 10px 16px;
+	gap: 8px;
+}
+
+.page-heading > p {
+	color: var(--black-tertiary-color);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.page-heading > img {
+	height: 24px;
+	width: 24px;
+	align-self: center;
+}
+
+/* || Main content */
+
+.page-content-container {
+	background: var(--white-background-color);
+	padding: 16px;
+	height: 100%;
+}
+
+.page-content {
+	background: var(--white-secundary-color);
+	border-radius: 5px;
+	padding: 10px;
+}
+
+.page-content > p {
+	color: var(--black-tertiary-color);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 600;
+}
+
+/* || Lists and items */
+
+ul {
+
+	/* Lists spacing */
+	padding: 0.5em 0em;
+}
+
+li {
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 400;
+
+	/* Indent list items */
+	margin-left: 1em;
+	padding-left: 0.5em;
+
+	list-style: "-";
+}
+
+/* || Dark mode styles */
+
+body.dark-mode .page-heading {
+	background: var(--dark-card-color);
+}
+
+body.dark-mode h1 {
+	color: var(--white-secundary-color);
+}
+
+body.dark-mode .page-heading > p {
+	color: var(--white-secundary-color);
+}
+
+body.dark-mode .page-content-container {
+	background: var(--black-tertiary-color);
+}
+
+body.dark-mode .page-content {
+	background: var(--dark-card-color);
+}
+
+body.dark-mode .page-content > p {
+	color: var(--white-secundary-color);
+}
+
+body.dark-mode .page-content li {
+	color: var(--white-secundary-color);
+}
