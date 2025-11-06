@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Respostas da Publicação</title>
+	<link rel="stylesheet" href="/src/styles/global.css">
+	<link rel="stylesheet" href="/src/pages/post-replies/style.css">
+	<link rel="stylesheet" href="/src/components/topMenu/topMenu.css">
+	<link rel="stylesheet" href="/src/components/navBar/navBar.css">
+</head>
+<body>
+	<header class="top-menu">
+
+		<!-- Top menu -->
+		<div class="icon-left">
+			<button id="perfil-btn" class="icon-btn" aria-label="Perfil">
+				<img id="perfil-icon" src="/src/assets/images/perfil.svg"
+				alt="Perfil" />
+			</button>
+		</div>
+		<div class="logo">
+			<img id="logo-senai" src="/src/assets/images/logo-mini.svg"
+			alt="Logo SENAI"/>
+		</div>
+		<div class="icon-right">
+			<button id="tema-escuro-toggle" class="icon-btn"
+			aria-label="Alternar tema escuro">
+				<img id="tema" src="/src/assets/images/moon-icon.svg"
+				alt="Tema Escuro"/>
+			</button>
+		</div>
+	</header>
+	<main>
+
+		<!-- Main content -->
+		<section class="new-reply-container">
+			<div class="formatting-options">
+				<button type="button">
+					<img
+					src="/src/assets/images/font-icon.svg"
+					alt="Ícone de um 'A' ao lado de um 'a'">
+				</button>
+				<button type="button">
+					<img
+					src="/src/assets/images/bold-icon.svg"
+					alt="Ícone de um 'B' em negrito">
+				</button>
+				<button type="button">
+					<img
+					src="/src/assets/images/italic-icon.svg"
+					alt="Ícone de um 'I' em itálico">
+				</button>
+				<button type="button">
+					<img
+					src="/src/assets/images/code-addpost-icon.svg"
+					alt="Ícone de um '<' ao lado de um '>'">
+				</button>
+				<button type="button">
+					<img
+					src="/src/assets/images/menu-icon.svg"
+					alt="Ícone de uma lista não ordenda">
+				</button>
+				<button type="button">
+					<img
+					src="/src/assets/images/list-icon.svg"
+					alt="Ícone de uma lista ordenada">
+				</button>
+				<button type="button">
+					<img
+					src="/src/assets/images/mention-icon.svg"
+					alt="Ícone de um '@'">
+				</button>
+				<button type="button">
+					<img
+					src="/src/assets/images/link-icon.svg"
+					alt="Ícone de uma corrente">
+				</button>
+				<button id="other-options" type="button">
+					<img
+					src="/src/assets/images/other-options-icon.svg"
+					alt="Ícone com 3 pontos">
+				</button>
+			</div>
+			<div class="type-new-reply-box">
+				<textarea name="type-new-reply-box" id="type-new-reply-box"
+				placeholder="Digite aqui a sua resposta..."></textarea>
+			</div>
+			<div class="new-reply-buttons">
+				<button id="cancel-reply-button"
+				type="button">Cancelar</button>
+				<button id="post-reply-button"
+				type="submit">Publicar resposta</button>
+			</div>
+		</section>
+		<section class="replies-section">
+			<article class="single-reply">
+				<div class="reply-header">
+					<div class="profile-picture">
+						<img
+						src="/src/assets/images/britinho-profile-picture.jpeg"
+						alt="Imagem de perfil de @Britinho">
+					</div>
+					<div class="reply-info-container">
+						<div class="user-info">
+							<h2>Lyan Brito</h2>
+							<button type="button">@Britinho</button>
+						</div>
+						<p>Publicada em 28/09/2025 às 14:00</p>
+					</div>
+					<div class="reply-options">
+						<button type="button">
+							<img src="/src/assets/images/save-icon.svg"
+							alt="Ícone de um marcador">
+						</button>
+						<button type="button">
+							<img src="/src/assets/images/other-options-icon.svg"
+							alt="Ícone com 3 pontos">
+						</button>
+					</div>
+				</div>
+				<div class="reply-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit, sed do eiusmod  tempor incididunt ut labore et
+						dolore magna aliqua.
+					</p>
+					<p>
+						Ut enim ad minim  veniam, quis nostrud exercitation
+						ullamco laboris nisi ut aliquip ex ea  commodo
+						consequat.
+					</p>
+					<p>
+						Duis aute irure dolor in reprehenderit in voluptate
+						velit esse cillum  dolore eu fugiat nulla pariatur.
+					</p>
+				</div>
+				<div class="reply-reactions">
+					<button class="reaction-buttons" type="button">
+						<img src="/src/assets/images/like-icon.svg" alt="">10
+					</button>
+					<button class="reaction-buttons" type="button">
+						<img src="/src/assets/images/comment-icon.svg" alt="">0
+					</button>
+					<button id="answer-button" type="button">Responder</button>
+				</div>
+			</article>
+			<article class="single-reply">
+				<div class="reply-header">
+					<div class="profile-picture">
+						<img
+						src="/src/assets/images/britinho-profile-picture.jpeg"
+						alt="Imagem de perfil de @Britinho">
+					</div>
+					<div class="reply-info-container">
+						<div class="user-info">
+							<h2>Lyan Brito</h2>
+							<button type="button">@Britinho</button>
+						</div>
+						<p>Publicada em 29/09/2025 às 19:00</p>
+					</div>
+					<div class="reply-options">
+						<button type="button">
+							<img src="/src/assets/images/save-icon.svg"
+							alt="Ícone de um marcador">
+						</button>
+						<button type="button">
+							<img src="/src/assets/images/other-options-icon.svg"
+							alt="Ícone com 3 pontos">
+						</button>
+					</div>
+				</div>
+				<div class="reply-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit. Praesent  facilisis iaculis nisl, id pharetra
+						nulla faucibus ac. Maecenas quis  felis mattis,
+						faucibus mauris sed, molestie leo.
+					</p>
+					<p>
+						Aliquam tristique nec  velit ut posuere. Pellentesque
+						scelerisque ipsum ac enim pellentesque  euismod.
+						Vivamus id eleifend.
+					</p>
+				</div>
+				<div class="reply-reactions">
+					<button class="reaction-buttons" type="button">
+						<img src="/src/assets/images/like-icon.svg" alt="">4
+					</button>
+					<button class="reaction-buttons" type="button">
+						<img src="/src/assets/images/comment-icon.svg" alt="">1
+					</button>
+					<button id="check-replies-button"
+					type="button">Ver respostas</button>
+					<button id="answer-button" type="button">Responder</button>
+				</div>
+			</article>
+			<article class="nested-reply">
+				<div class="reply-header">
+					<div class="profile-picture">
+						<div class="profile-picture-stroke">
+							<img id="default-profile-picture"
+							src="/src/assets/images/perfil.svg"
+							alt="Imagem de perfil padrão com uma ilustração
+							minimalista da silhueta de uma pessoa">
+						</div>
+					</div>
+					<div class="reply-info-container">
+						<div class="user-info">
+							<h2>Minnie Winnie</h2>
+							<button type="button">@minnie_...</button>
+						</div>
+						<p>Publicada em 29/09/2025 às 20:30</p>
+					</div>
+					<div class="reply-options">
+						<button type="button">
+							<img src="/src/assets/images/save-icon.svg"
+							alt="Ícone de um marcador">
+						</button>
+						<button type="button">
+							<img src="/src/assets/images/other-options-icon.svg"
+							alt="Ícone com 3 pontos">
+						</button>
+					</div>
+				</div>
+				<div class="reply-content">
+					<p>
+						Lorem ipsum dolor sit amet, consectetur adipiscing
+						elit. Ut felis velit, accumsan et arcu nec, eleifend
+						convallis felis. Duis sollicitudin a  enim sit amet
+						pretium. Sed sollicitudin erat a arcu bibendum pulvinar.
+					</p>
+				</div>
+				<div class="reply-reactions">
+					<button class="reaction-buttons" type="button">
+						<img src="/src/assets/images/like-icon.svg" alt="">11
+					</button>
+					<button class="reaction-buttons" type="button">
+						<img src="/src/assets/images/comment-icon.svg" alt="">0
+					</button>
+					<button id="answer-button" type="button">Responder</button>
+				</div>
+			</article>
+		</section>
+	</main>
+	<footer>
+
+		<!-- Navbar -->
+		<div class="container-icons">
+			<a href="/src/pages/post/index.html">
+				<img id="dark-theme-home" class="home-icons"
+				src="/src/assets/images/home-icon.svg"
+				alt="icone home para homepage">
+			</a>
+			<a href="/src/pages/post/index.html">
+				<img id="dark-theme-bell" class="bell-icon"
+				src="/src/assets/images/bell-icon.svg"
+				alt="icone de sino para notificações">
+			</a>
+			<a href="/src/pages/post/index.html">
+				<img id="dark-theme-chat" class="chat-icon"
+				src="/src/assets/images/chat-icon.svg"
+				alt="icone de chat para conversação">
+			</a>
+			<a href="/src/pages/post/index.html">
+				<img id="dark-theme-lens" class="lens-icon"
+				src="/src/assets/images/lens-icon.svg"
+				alt="icone de lupa para pesquisa">
+			</a>
+		</div>
+	</footer>
+	<script src="/src/scripts/script.js"></script>
+</body>
+</html>
