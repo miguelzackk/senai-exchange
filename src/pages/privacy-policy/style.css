@@ -77,6 +77,10 @@ li {
 
 /* || Dark mode styles */
 
+body.dark-mode .page-heading img {
+	filter: invert(1);
+}
+
 body.dark-mode .page-heading {
 	background: var(--dark-card-color);
 }
