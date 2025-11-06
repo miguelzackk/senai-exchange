@@ -1,4 +1,4 @@
-/* || General styles */
+/* || Page styles */
 
 main {
 	display: flex;
@@ -80,6 +80,10 @@ h1 {
 }
 
 /* || Dark mode styles */
+
+body.dark-mode .page-heading img {
+	filter: invert(1);
+}
 
 body.dark-mode h1 {
 	color: var(--white-secundary-color);
