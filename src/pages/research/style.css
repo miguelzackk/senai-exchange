@@ -1,0 +1,239 @@
+@import url("/src/styles/global.css");
+@import url("/src/styles/library.css");
+
+body.mobile-frame {
+  margin: 0;
+  background: #D9D9D9;
+  font-family: "Montserrat", "Inter", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.top-menu, main, footer {
+  width: 320px;
+  box-sizing: border-box;
+}
+
+/* nav bar de pesquisa*/
+.top-menu {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 18px; 
+  background: #FFFFFF;
+  padding: 8px 0;
+}
+
+.top-menu .logo {
+  display: flex;
+  width: 53px;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1px;
+}
+
+.search-pill {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  width: 180px;
+  height: 24px;
+  background: #FFFFFF;
+  border-radius: 12px;
+  border: 0.5px solid var(--Battleship-Gray-100, #878787);
+  padding: 0 12px; 
+}
+
+.search-pill .search-icon {
+  width: 14px;
+  height: 14px;
+  fill: #E30613;
+  flex-shrink: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+
+
+.search-input {
+  border: none;
+  outline: none;
+  background: transparent;
+  text-align: left;
+  font-size: 13px;
+  color: #8C8C8C;
+  width: 100%;
+}
+
+.clear-search {
+  display: none;
+}
+
+.clear-search img {
+  width: 7px;
+  height: 7px;
+}
+
+.settings-icon {
+  width: 17px;
+  height: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* pesquisas recentes */
+.recent-searches {
+  background: #E1E1E1;
+  margin-top: 0px; 
+  overflow: hidden;
+  
+}
+.recent-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 9px 16px;
+}
+
+.recent-header .left {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.recent-title {
+  color: #7b7b7b;
+  font-size: 13px;
+}
+
+.close-recent {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.close-recent img {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.recent-list {
+  display: flex;
+  gap: 14px;
+  padding: 12px 16px;
+  overflow-x: auto;
+  background: #FFFFFF;
+}
+
+.user-card {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+gap: 6px;
+align-self: stretch;
+}
+
+.user-photo {
+display: flex;
+width: 56px;
+height: 56px;
+padding: 0 6px;
+justify-content: center;
+align-items: center;
+}
+
+.user-name {
+color: var(--Bold-text, #141619);
+font-family: Montserrat;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.155px;
+}
+
+.user-handle {
+color: var(--Darken-text, #687684);
+font-family: Montserrat;
+font-size: 10px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+letter-spacing: -0.155px;
+}
+
+/* pesquisa */
+.search-line {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  padding: 10px 12px;
+  border-top: 1px solid #E0E0E0;
+  border-bottom: 1px solid #E0E0E0;
+}
+
+.search-line-left {
+  color: #222;
+  font-size: 14px;
+}
+
+.search-line-action img {
+  width: 13px;
+  height: 13px;
+}
+
+.results-area {
+  width: 100%;
+  height: 320px;
+  background: #D9D9D9;
+}
+
+/* footer */
+footer {
+  width: 320px;
+  height: 43px;
+}
+
+.container-icons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 320px;
+  height: 43px;
+  background: #FFFFFF;
+}
+
+.home-icon { width: 27px; height: 27px; }
+.bell-icon { width: 26px; height: 26px; }
+.chat-icon { width: 24.5px; height: 24.5px; }
+.lens-icon { width: 20px; height: 20px; }
+
+/* modo escuro */
+body.dark-mode {
+  background: #2B2B2B;
+}
+
+body.dark-mode .top-menu,
+body.dark-mode .search-pill,
+body.dark-mode .recent-searches,
+body.dark-mode .search-line,
+body.dark-mode .container-icons {
+  background: #3D3D3D;
+}
+
+body.dark-mode .recent-title,
+body.dark-mode .user-name,
+body.dark-mode .user-handle,
+body.dark-mode .search-line-left {
+  color: #FFFFFF;
+}
