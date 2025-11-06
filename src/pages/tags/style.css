@@ -1,0 +1,100 @@
+/* || General styles */
+
+main {
+	display: flex;
+	flex-direction: column;
+	padding: 20px 16px;
+	gap: 16px;
+	height: 100vh;
+}
+
+/* || Heading */
+
+h1 {
+	color: var(--black-tertiary-color);
+	font-size: 10px;
+	font-style: normal;
+	font-weight: 500;
+}
+
+.page-heading {
+	border-bottom: 1px solid var(--white-background-color);
+	display: flex;
+	align-items: center;
+	padding: 6px 5px;
+	gap: 5px;
+}
+
+.page-heading > img {
+	width: 21px;
+	height: 21px;
+}
+
+/* || Main content */
+
+.tags-wrapper {
+
+	/* Keep rounded corners */
+	border: 1px solid transparent;
+	background: linear-gradient(var(--white-secundary-color),
+	var(--white-secundary-color)) padding-box, linear-gradient(to bottom,
+	var(--red-primary-color), var(--gray-quartenary-color)) border-box;
+	border-radius: 4px;
+
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	row-gap: 38px;
+	column-gap: 4px;
+	padding: 11px 16px;
+}
+
+.tags-wrapper > button {
+	border: 1px solid var(--gray-line-color);
+	border-radius: 20px;
+	color: var(--black-title-color);
+	font-size: 9px;
+	font-style: normal;
+	font-weight: 500;
+	cursor: pointer;
+	display: flex;
+	gap: 2px;
+	padding: 0px 5px;
+}
+
+.tags-wrapper img {
+	width: 12px;
+	height: 12px;
+}
+
+#select-tag-button {
+	color: var(--white-secundary-color);
+	background: var(--red-primary-color);
+	font-size: 12px;
+	font-style: normal;
+	font-weight: 500;
+	cursor: pointer;
+	align-self: center;
+	border-radius: 10px;
+	padding: 4px 12px;
+}
+
+/* || Dark mode styles */
+
+body.dark-mode h1 {
+	color: var(--white-secundary-color);
+}
+
+body.dark-mode .page-heading {
+	border-bottom: 1px solid var(--white-secundary-color);
+}
+
+body.dark-mode .tags-wrapper {
+	background: linear-gradient(var(--dark-card-color), var(--dark-card-color))
+	padding-box, linear-gradient(to bottom, var(--red-primary-color),
+	var(--gray-quartenary-color)) border-box;
+}
+
+body.dark-mode .tags-wrapper > button {
+	color: var(--white-secundary-color);
+}

@@ -1,5 +1,6 @@
 @import url("/src/styles/global.css");
-
+@import url("/src/styles/style.css");
+@import url("/src/styles/library.css");
 
 .sidebar {
   position: fixed;

@@ -1,12 +1,12 @@
-/* @media (max-width: 500px) { */
+@import url(/src/styles/global.css);
+
 body {
   display: flex;
   flex-direction: column;
-  background-color: #e1e1e1;
+  background-color: var(--white-background-color);
   justify-content: space-between;
   height: 100vh;
 }
-
 
 main {
   display: flex;
@@ -15,7 +15,7 @@ main {
   justify-content: center;
   align-items: center;
   align-self: stretch;
-  background: var(--Branco---Secundary, #fff);
+  background: var(--white-secundary-color);
 }
 
 .error-section {
@@ -35,28 +35,29 @@ main {
 }
 
 .text h1 {
-  color: var(--Black---Tertiary, #000);
+  color: var(--black-tertiary-color);
   text-align: center;
   font-size: 15px;
   font-style: normal;
   font-weight: 700;
-  line-height: 20px; /* 133.333% */
+  line-height: 20px;
   letter-spacing: 0.3px;
 }
 
 .text h4 {
-  color: var(--Black-200, #3d3d3d);
+  color: var(--gray-secondary-text-color);
   text-align: center;
   font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: 14px; /* 140% */
+  line-height: 14px;
 }
 
 footer {
   display: flex;
   width: 100%;
   flex-direction: column;
+  height: 99.19px;
   justify-content: center;
   align-items: flex-end;
   gap: 8px;
@@ -70,13 +71,13 @@ footer {
   justify-content: center;
   align-items: center;
   border-radius: 50px;
-  background: var(--Pantone-485---Primary, #e30613);
-  color: var(--White-White, var(--Branco---Secundary, #fff));
+  background: var(--red-primary-color);
+  color: var(--white-secundary-color);
   text-align: center;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
-  line-height: 20px; /* 166.667% */
+  line-height: 20px;
   letter-spacing: -0.24px;
 }
 
@@ -92,10 +93,85 @@ footer {
   height: 48.19px;
   flex-shrink: 0;
   border-radius: 50px;
-  background: var(--Pantone-485---Primary, #e30613);
+  background: var(--red-primary-color);
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-/* } */
+
+.navbar {
+  display: flex;
+  padding: 320px, 43px;
+  width: 100%;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-icons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 100%;
+  height: 43px;
+  background-color: var(--white-secundary-color);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.bell-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.chat-icon {
+  width: 24.5px;
+  height: 24.5px;
+}
+
+.lens-icon {
+  width: 20px;
+  height: 20px;
+}
+
+body.dark-mode {
+  background-color: var(--dark-background-color);
+  color: var(--dark-text-color);
+}
+
+body.dark-mode main {
+  background-color: var(--dark-card-color);
+}
+
+body.dark-mode .text h1 {
+  color: var(--white-soft-color);
+}
+
+body.dark-mode .text h4 {
+  color: var(--gray-light-text-color);
+}
+
+body.dark-mode #btnreload {
+  background-color: var(--red-primary-color);
+  color: var(--white-secundary-color);
+  box-shadow: 0 0 8px var(--red-primary-transparent);
+}
+
+body.dark-mode footer {
+  background-color: var(--dark-card-color);
+}
+
+body.dark-mode .container-icons {
+  background: var(--dark-surface-color);
+}
+
+body.dark-mode .container-icons img {
+  filter: brightness(0) invert(1) !important;
+}

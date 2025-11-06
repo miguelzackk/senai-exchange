@@ -1,7 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  // ==============================
-  // 🔹 Alternar Tema Escuro / Claro
-  // ==============================
+  //  Alternar Tema Escuro / Claro
   const perfilIcon = document.getElementById("perfil-icon");
   const logoSenai = document.getElementById("logo-senai");
   const temaIcon = document.getElementById("tema");

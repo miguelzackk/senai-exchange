@@ -44,45 +44,15 @@
           </button>
         </div>
       </header>
-      <!--  trocar de tema -->
-      <script>
-        const toggle = document.getElementById("tema-escuro-toggle");
-        const tema = document.getElementById("tema");
-        const perfilIcon = document.getElementById("perfil-icon");
-        const logoSenai = document.getElementById("logo-senai");
-
-        toggle.addEventListener("click", () => {
-          document.body.classList.toggle("dark-mode");
-          const darkMode = document.body.classList.contains("dark-mode");
-
-          tema.src = darkMode
-            ? "/src/assets/images/sun-white-icon.svg"
-            : "/src/assets/images/moon-icon.svg";
-
-          perfilIcon.src = darkMode
-            ? "/src/assets/images/perfil-white-icon.svg"
-            : "/src/assets/images/perfil.svg";
-
-          logoSenai.src = darkMode
-            ? "/src/assets/images/logo-mini-white.svg"
-            : "/src/assets/images/logo-mini.svg";
-
-          tema.alt = darkMode ? "Tema Claro" : "Tema Escuro";
-          perfilIcon.alt = darkMode ? "Perfil (tema escuro)" : "Perfil";
-          logoSenai.alt = darkMode ? "Logo SENAI (tema escuro)" : "Logo SENAI";
-        });
-      </script>
-
       <main>
         <div class="error-section">
           <div class="text">
             <h1>Sem novas atualizações</h1>
-            <h4>
-              Parece que não existem novas contribuições agora,<br />
-              tente recarregar a página para nova busca
-            </h4>
+            <h4>Esse recurso será adicionado em breve!</h4>
           </div>
-          <button type="button" id="btnreload">Recarregar</button>
+          <a href="#">
+            <button type="button" id="btnreload">Recarregar</button>
+          </a>
         </div>
       </main>
     </div>
@@ -98,9 +68,42 @@
         </a>
       </div>
 
-      <div class="">
-        <!-- navbar -->
-      </div>
-    </footer>
-  </body>
+      <div class="navbar">
+               <div class="container-icons">
+          <a href="/index.html">
+            <img
+              id="dark-theme-home"
+              class="home-icons"
+              src="/src/assets/images/home-icon.svg"
+              alt="icone home para homepage"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-bell"
+              class="bell-icon"
+              src="/src/assets/images/bell-icon.svg"
+              alt="icone de sino para notificações"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-chat"
+              class="chat-icon"
+              src="/src/assets/images/chat-icon.svg"
+              alt="icone de chat para conversação"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-lens"
+              class="lens-icon"
+              src="/src/assets/images/lens-icon.svg"
+              alt="icone de lupa para pesquisa"
+            />
+          </a>
+        </div>
+      </footer>
+      <script src="/src/scripts/script.js"></script>
+    </body>
 </html>
