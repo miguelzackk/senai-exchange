@@ -1,24 +1,103 @@
-<footer>
-<!-- Links -->
-  <link rel="stylesheet" href="/src/styles/global.css">
-  <link rel="stylesheet" href="/src/components/navBar/navBar.css">
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pesquisa | Senai Exchange</title>
 
-<div class="container-icons">
-   <a href="/src/pages/post/index.html">
-    <img id="dark-theme-home" class="home-icons" src="/src/assets/images/home-icon.svg" alt="icone home para homepage">
-    </a>
-     <a href="/src/pages/post/index.html">
-    <img id="dark-theme-bell" class="bell-icon" src="/src/assets/images/bell-icon.svg" alt="icone de sino para notificações">
-    </a>
-    <a href="/src/pages/post/index.html">
-    <img id="dark-theme-chat" class="chat-icon" src="/src/assets/images/chat-icon.svg" alt="icone de chat para conversação">
-    </a>
-    <a href="/src/pages/post/index.html">
-    <img id="dark-theme-lens" class="lens-icon" src="/src/assets/images/lens-icon.svg" alt="icone de lupa para pesquisa">
-      </a>
+  <!-- Estilos globais -->
+  <link rel="stylesheet" href="/src/styles/global.css" />
+  <link rel="stylesheet" href="/src/pages/research/style.css" />
+</head>
 
-</div>
-</footer>
-<script src="/src/scripts/script.js"></script> 
+<body class="mobile-frame">
+  <!-- TOPO -->
+  <header class="top-menu">
+    <div class="left">
+      <img id="logo-senai" src="/src/assets/images/logo-mini.svg" alt="Senai" class="logo" />
+    </div>
 
+    <div class="center">
+      <div class="search-pill">
+        <img class="search-icon" src="/src/assets/images/search-icon.svg" alt="buscar" />
+        <input id="searchInput" class="search-input" type="text" placeholder="Search..." aria-label="Pesquisar" />
+        <button class="clear-search" title="Limpar" aria-label="Limpar pesquisa">
+          <img src="/src/assets/images/close-white.svg" alt="Limpar" />
+        </button>
+      </div>
+    </div>
 
+    <div class="right">
+      <button id="tema-escuro-toggle" class="icon-btn" title="Tema">
+        <img id="tema" src="/src/assets/images/moon-icon.svg" alt="tema" />
+      </button>
+      <img src="/src/assets/images/icon-settings.svg" alt="configurações" class="settings-icon" />
+    </div>
+  </header>
+
+  <!-- BUSCAS RECENTES -->
+  <main>
+    <section class="recent-searches">
+      <div class="recent-header">
+        <div class="left">
+          <img src="/src/assets/images/filter.svg" alt="tag" class="tag-icon" />
+          <span class="recent-title">Recent searches</span>
+        </div>
+        <button class="close-recent" aria-label="Fechar recentes">
+          <img src="/src/assets/images/close-icon.svg" alt="Fechar" />
+        </button>
+      </div>
+
+      <div id="recentList" class="recent-list">
+        <div class="user-card" data-name="minnie winchester">
+          <img src="/src/assets/images/perfil.svg" alt="Minnie" class="user-photo" />
+          <div class="user-info">
+            <div class="user-name">Minnie Win...</div>
+            <div class="user-handle">@minnie_w...</div>
+          </div>
+        </div>
+
+        <div class="user-card" data-name="lyan brito">
+          <img src="/src/assets/images/user-photo-sideBar.svg" alt="Lyan" class="user-photo" />
+          <div class="user-info">
+            <div class="user-name">Lyan Brito</div>
+            <div class="user-handle">@britinho...</div>
+          </div>
+        </div>
+
+        <div class="user-card" data-name="figma profile">
+          <img src="/src/assets/images/perfil.svg" alt="Figma" class="user-photo" />
+          <div class="user-info">
+            <div class="user-name">Figma Pro...</div>
+            <div class="user-handle">@FigmaP...</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LINHA DE PESQUISA -->
+    <section class="search-line">
+      <div class="search-line-left">minnie</div>
+      <button id="submit-line" class="search-line-action" title="Ir">
+        <img src="/src/assets/images/arrow-blue.svg" alt="buscar" />
+      </button>
+    </section>
+
+    <!-- ÁREA DE RESULTADOS -->
+    <section class="results-area"></section>
+  </main>
+
+  <!-- RODAPÉ -->
+  <footer>
+    <div class="container-icons">
+      <a href="#"><img id="dark-theme-home" class="home-icon" src="/src/assets/images/home-icon.svg" alt="home" /></a>
+      <a href="#"><img id="dark-theme-bell" class="bell-icon" src="/src/assets/images/bell-icon.svg" alt="notificações" /></a>
+      <a href="#"><img id="dark-theme-chat" class="chat-icon" src="/src/assets/images/chat-icon.svg" alt="chat" /></a>
+      <a href="#"><img id="dark-theme-lens" class="lens-icon" src="/src/assets/images/lens-icon.svg" alt="pesquisa" /></a>
+    </div>
+  </footer>
+
+  <!-- Script funcional -->
+  <script src="/src/scripts/script.js"></script>
+</body>
+</html>
