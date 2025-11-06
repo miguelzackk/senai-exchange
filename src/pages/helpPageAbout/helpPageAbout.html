@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/src/components/topMenu/topMenu.css" />
     <link rel="stylesheet" href="/src/pages/helpPageAbout/style.css" />
     <link rel="stylesheet" href="/src/components/navBar/navBar.css" />
+    <link rel="stylesheet" href="/src/components/sideBar/style.css" />
   </head>
   <body>
     <header class="top-menu">
@@ -105,6 +106,80 @@
         </a>
       </div>
     </footer>
+    <aside id="sidebar" class="sidebar">
+      <div class="sidebar-header">
+        <div class="profile-container">
+          <img
+            src="/src/assets/images/user-photo-sideBar.svg"
+            alt="Foto de perfil"
+            class="perfil-img"
+          />
+          <button id="close-menu" class="close-btn" aria-label="Fechar menu">
+            <img src="/src/assets/images/north-star-24.svg" alt="Fechar" />
+          </button>
+        </div>
+
+        <div class="user-profile">
+          <h3>Lyan Brito</h3>
+          <p>@Britinho</p>
+        </div>
+      </div>
+
+      <div class="sidebar-nav">
+        <a href="#">
+          <img
+            src="/src/assets/images/person-fill-24.svg"
+            alt="Perfil"
+            class="icon-menu"
+          />
+          Perfil
+        </a>
+        <a href="#">
+          <img
+            src="/src/assets/images/pencil-24.svg"
+            alt="Rascunhos"
+            class="icon-menu"
+          />
+          Rascunhos
+        </a>
+        <a href="#">
+          <img
+            src="/src/assets/images/save-sideaBar.svg"
+            alt="Favoritos"
+            class="icon-menu"
+          />
+          Favoritos
+        </a>
+        <a href="#">
+          <img
+            src="/src/assets/images/star-fill-24.svg"
+            alt="Destaques"
+            class="icon-menu"
+          />
+          Destaques
+        </a>
+        <a href="#">
+          <img
+            src="/src/assets/images/fire-24.svg"
+            alt="Em alta"
+            class="icon-menu"
+          />
+          Em alta
+        </a>
+      </div>
+
+      <div class="sidebar-footer">
+        <div class="sidebar-footer-content">
+          <a href="#" class="logout">
+            <img src="/src/assets/images/sign-out.svg" alt="Sair" />
+            Sair
+          </a>
+          <a href="/src/pages/helpPageAbout/helpPageAbout.html" class="support">
+            <img src="/src/assets/images/suport.svg" alt="Suporte" />
+          </a>
+        </div>
+      </div>
+    </aside>
     <script src="/src/scripts/script.js"></script>
   </body>
 </html>

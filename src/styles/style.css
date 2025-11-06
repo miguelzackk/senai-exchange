@@ -231,6 +231,48 @@ footer {
   gap: 8px;
   flex-shrink: 0;
 }
+.navbar {
+  display: flex;
+  padding: 320px, 43px;
+  width: 100%;
+  height: 43px;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-icons {
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100%;
+  height: 43px;
+  background-color: var(--white-secundary-color);
+
+  transition: background 0.2s, transform 0.2s;
+}
+
+.home-icon {
+  width: 27px;
+  height: 27px;
+}
+
+.bell-icon {
+  width: 26px;
+  height: 26px;
+}
+
+.chat-icon {
+  width: 24.5px;
+  height: 24.5px;
+}
+
+.lens-icon {
+  width: 20px;
+  height: 20px;
+}
 
 .btn-post {
   display: flex;
@@ -310,49 +352,6 @@ body.dark-mode main svg * {
   filter: invert(1) brightness(1.4) contrast(1.2);
   stroke: var(--white-secundary-color) !important;
   fill: var(--white-secundary-color) !important;
-}
-
-.navbar {
-  display: flex;
-  padding: 320px, 43px;
-  width: 100%;
-  height: 43px;
-  justify-content: center;
-  align-items: center;
-}
-
-.container-icons {
-  position: fixed;
-  bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  justify-content: space-evenly;
-  width: 100%;
-  height: 43px;
-  background-color: var(--white-secundary-color);
-
-  transition: background 0.2s, transform 0.2s;
-}
-
-.home-icon {
-  width: 27px;
-  height: 27px;
-}
-
-.bell-icon {
-  width: 26px;
-  height: 26px;
-}
-
-.chat-icon {
-  width: 24.5px;
-  height: 24.5px;
-}
-
-.lens-icon {
-  width: 20px;
-  height: 20px;
 }
 
 body.dark-mode .container-icons {

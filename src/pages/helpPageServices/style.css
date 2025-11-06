@@ -98,10 +98,6 @@ button {
   transition: background-color 0.3s;
 }
 
-button:hover {
-  background-color: var(--orange-java-color);
-}
-
 body.dark-mode .page-top {
   background-color: var(--black-title-color);
   color: var(--red-primary-color);

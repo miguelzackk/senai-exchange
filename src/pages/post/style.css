@@ -298,3 +298,31 @@ body.dark-mode .container-icons img {
 body.dark-mode .container-icons img {
   filter: brightness(0) invert(1) !important;
 }
+
+body.dark-mode .sidebar-nav > a {
+  color: var(--white-secundary-color) !important;
+  background: transparent !important;
+  filter: none !important;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+body.dark-mode .sidebar-nav > a > img {
+  filter: invert(1) brightness(1.2);
+}
+
+body.dark-mode .sidebar-nav > a:hover {
+  background: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-mode .sidebar-nav {
+  border-bottom: 1px solid #fff !important;
+}
+
+body.dark-mode .user-profile p {
+  color: #515151 !important;
+  filter: none !important;
+}
+
+body.dark-mode .user-profile h3 {
+  color: #ffffff !important;
+}

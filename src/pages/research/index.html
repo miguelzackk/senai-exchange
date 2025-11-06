@@ -1,101 +1,163 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Pesquisa | Senai Exchange</title>
-  <link rel="stylesheet" href="../../styles/global.css" />
-  <link rel="stylesheet" href="./style.css" />
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pesquisa | Senai Exchange</title>
+    <link rel="stylesheet" href="../../styles/global.css" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
 
-<body class="mobile-frame">
+  <body class="mobile-frame">
+    <!-- top menu de pesquisa -->
+    <header class="top-menu">
+      <div class="left">
+        <img
+          id="logo-senai"
+          src="../../assets/images/logo-mini-research.svg"
+          alt="Senai Exchange"
+          class="logo"
+        />
+      </div>
 
-  <!-- top menu de pesquisa -->
-  <header class="top-menu">
-    <div class="left">
-      <img id="logo-senai" src="../../assets/images/logo-mini-research.svg" alt="Senai Exchange" class="logo" />
-    </div>
+      <div class="center">
+        <div class="search-pill">
+          <img
+            src="../../assets/images/search-lens.svg"
+            alt="buscar"
+            class="search-icon"
+          />
+          <input
+            id="searchInput"
+            class="search-input"
+            type="text"
+            placeholder="Search..."
+            aria-label="Pesquisar"
+          />
+          <button class="clear-search" aria-label="Limpar pesquisa">
+            <img src="../../assets/images/close-button.svg" alt="Limpar" />
+          </button>
+        </div>
+      </div>
 
-    <div class="center">
-      <div class="search-pill">
-        <img src="../../assets/images/search-lens.svg" alt="buscar" class="search-icon" />
-        <input id="searchInput" class="search-input" type="text" placeholder="Search..." aria-label="Pesquisar" />
-        <button class="clear-search" aria-label="Limpar pesquisa">
-          <img src="../../assets/images/close-button.svg" alt="Limpar" />
+      <div class="right">
+        <img
+          src="../../assets/images/config-icon-research.svg"
+          alt="Configurações"
+          class="settings-icon"
+        />
+      </div>
+    </header>
+
+    <main>
+      <!-- buscas recentes -->
+      <section class="recent-searches">
+        <div class="recent-header">
+          <div class="left">
+            <img
+              src="../../assets/images/tag-recent-searchs.svg"
+              alt="Tag"
+              class="tag-icon"
+            />
+            <span class="recent-title">Recent searches</span>
+          </div>
+          <button class="close-recent" aria-label="Fechar recentes">
+            <img src="../../assets/images/close-button.svg" alt="Fechar" />
+          </button>
+        </div>
+
+        <div id="recentList" class="recent-list">
+          <div class="user-card" data-name="minnie winchester">
+            <img
+              src="../../assets/images/profile-research.svg"
+              alt="Minnie Winchester"
+              class="user-photo"
+            />
+            <div class="user-info">
+              <div class="user-name">Minnie Win...</div>
+              <div class="user-handle">@minnie_w...</div>
+            </div>
+          </div>
+
+          <div class="user-card" data-name="lyan brito">
+            <img
+              src="../../assets/images/user-photo-sideBar.svg"
+              alt="Lyan Brito"
+              class="user-photo"
+            />
+            <div class="user-info">
+              <div class="user-name">Lyan Brito</div>
+              <div class="user-handle">@britinho...</div>
+            </div>
+          </div>
+
+          <div class="user-card" data-name="figma profile">
+            <img
+              src="../../assets/images/log-figma.svg"
+              alt="Figma Profile"
+              class="user-photo"
+            />
+            <div class="user-info">
+              <div class="user-name">Figma Pro...</div>
+              <div class="user-handle">@FigmaP...</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- linha de pesquisa -->
+      <section class="search-line">
+        <div class="search-line-left">minnie</div>
+        <button id="submit-line" class="search-line-action" title="Ir">
+          <img src="../../assets/images/blue-arrow-research.svg" alt="Buscar" />
         </button>
-      </div>
-    </div>
+      </section>
 
-    <div class="right">
-      <img src="../../assets/images/config-icon-research.svg" alt="Configurações" class="settings-icon" />
-    </div>
-  </header>
+      <!-- area de resultados da busca -->
+      <section class="results-area"></section>
+    </main>
 
-  <main>
-
-    <!-- buscas recentes -->
-    <section class="recent-searches">
-      <div class="recent-header">
-        <div class="left">
-          <img src="../../assets/images/tag-recent-searchs.svg" alt="Tag" class="tag-icon" />
-          <span class="recent-title">Recent searches</span>
-        </div>
-        <button class="close-recent" aria-label="Fechar recentes">
-          <img src="../../assets/images/close-button.svg" alt="Fechar" />
-        </button>
-      </div>
-
-      <div id="recentList" class="recent-list">
-        <div class="user-card" data-name="minnie winchester">
-          <img src="../../assets/images/profile-research.svg" alt="Minnie Winchester" class="user-photo" />
-          <div class="user-info">
-            <div class="user-name">Minnie Win...</div>
-            <div class="user-handle">@minnie_w...</div>
-          </div>
-        </div>
-
-        <div class="user-card" data-name="lyan brito">
-          <img src="../../assets/images/user-photo-sideBar.svg" alt="Lyan Brito" class="user-photo" />
-          <div class="user-info">
-            <div class="user-name">Lyan Brito</div>
-            <div class="user-handle">@britinho...</div>
-          </div>
-        </div>
-
-        <div class="user-card" data-name="figma profile">
-          <img src="../../assets/images/log-figma.svg" alt="Figma Profile" class="user-photo" />
-          <div class="user-info">
-            <div class="user-name">Figma Pro...</div>
-            <div class="user-handle">@FigmaP...</div>
-          </div>
+    <!-- nav bar -->
+    <footer>
+      <div class="navbar">
+        <div class="container-icons">
+          <a href="/index.html">
+            <img
+              id="dark-theme-home"
+              class="home-icons"
+              src="/src/assets/images/home-icon.svg"
+              alt="icone home para homepage"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-bell"
+              class="bell-icon"
+              src="/src/assets/images/bell-icon.svg"
+              alt="icone de sino para notificações"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-chat"
+              class="chat-icon"
+              src="/src/assets/images/chat-icon.svg"
+              alt="icone de chat para conversação"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-lens"
+              class="lens-icon"
+              src="/src/assets/images/lens-icon.svg"
+              alt="icone de lupa para pesquisa"
+            />
+          </a>
         </div>
       </div>
-    </section>
+    </footer>
 
-    <!-- linha de pesquisa -->
-    <section class="search-line">
-      <div class="search-line-left">minnie</div>
-      <button id="submit-line" class="search-line-action" title="Ir">
-        <img src="../../assets/images/blue-arrow-research.svg" alt="Buscar" />
-      </button>
-    </section>
-
-    <!-- area de resultados da busca -->
-    <section class="results-area"></section>
-
-  </main>
-
-  <!-- nav bar -->
-  <footer>
-    <div class="container-icons">
-      <a href="#"><img id="dark-theme-home" class="home-icon" src="../../assets/images/home-icon.svg" alt="home" /></a>
-      <a href="#"><img id="dark-theme-bell" class="bell-icon" src="../../assets/images/bell-icon.svg" alt="notificações" /></a>
-      <a href="#"><img id="dark-theme-chat" class="chat-icon" src="../../assets/images/chat-icon.svg" alt="chat" /></a>
-      <a href="#"><img id="dark-theme-lens" class="lens-icon" src="../../assets/images/lens-icon.svg" alt="pesquisa" /></a>
-    </div>
-  </footer>
-
-  <!-- Script -->
-  <script src="../../scripts/script.js"></script>
-</body>
+    <!-- Script -->
+    <script src="../../scripts/script.js"></script>
+  </body>
 </html>

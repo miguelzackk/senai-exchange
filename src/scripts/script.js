@@ -51,7 +51,6 @@ document.addEventListener("DOMContentLoaded", () => {
     temaBtn.addEventListener("click", alternarTema);
   }
 
-
   //  suport icon -> Página "Sobre"
   const lampBtn = document.getElementById("lamp-btn");
   if (lampBtn) {
@@ -61,24 +60,33 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   //  Sidebar
-const sidebar = document.getElementById("sidebar");
-const overlay = document.getElementById("overlay");
-const perfilBtn = document.getElementById("perfil-btn");
+  const sidebar = document.getElementById("sidebar");
+  const overlay = document.getElementById("overlay");
+  const perfilBtn = document.getElementById("perfil-btn");
+  const closeBtn = document.getElementById("close-menu");
 
-if (perfilBtn && sidebar && overlay) {
   perfilBtn.addEventListener("click", () => {
     sidebar.classList.add("open");
     overlay.classList.add("active");
   });
-}
 
-// Fecha ao clicar fora
-if (overlay) {
+  closeBtn.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("active");
+  });
+
   overlay.addEventListener("click", () => {
     sidebar.classList.remove("open");
     overlay.classList.remove("active");
   });
-}
+
+  // Fecha ao clicar fora
+  if (overlay) {
+    overlay.addEventListener("click", () => {
+      sidebar.classList.remove("open");
+      overlay.classList.remove("active");
+    });
+  }
   // Pesquisa (filtros, limpar etc.)
   const searchInput = document.getElementById("searchInput");
   const clearBtn = document.querySelector(".clear-search");
