@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Senai Exchange</title>
     <link rel="stylesheet" href="/src/styles/global.css" />
-    <link rel="stylesheet" href="/src/styles/styles.css" />
+    <link rel="stylesheet" href="/src/styles/style.css" />
   </head>
 
   <body>
@@ -23,7 +23,7 @@
             />
           </button>
         </div>
-  
+
         <div class="logo">
           <img
             id="logo-senai"
@@ -31,7 +31,7 @@
             alt="Logo SENAI"
           />
         </div>
-  
+
         <div class="icon-right">
           <button
             id="tema-escuro-toggle"
@@ -46,7 +46,6 @@
           </button>
         </div>
       </header>
-  
       <main>
         <div class="buttons-filter">
           <button type="button" class="tags" id="program">Programação</button>
@@ -62,7 +61,10 @@
           <div class="top-post">
             <div class="infos-post">
               <div class="perfil-post">
-                <img src="/src/assets/images/perfil.svg" alt="icone de perfil" />
+                <img
+                  src="/src/assets/images/perfil.svg"
+                  alt="icone de perfil"
+                />
                 <div class="infos-perfil">
                   <h6>Minnie Winnie</h6>
                   <p>09 setembro de 2025 11:14</p>
@@ -209,9 +211,43 @@
         </a>
       </div>
 
-      <div class="">
-        <!-- navbar -->
+      <div class="navbar">
+        <div class="container-icons">
+          <a href="/index.html">
+            <img
+              id="dark-theme-home"
+              class="home-icons"
+              src="/src/assets/images/home-icon.svg"
+              alt="icone home para homepage"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-bell"
+              class="bell-icon"
+              src="/src/assets/images/bell-icon.svg"
+              alt="icone de sino para notificações"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-chat"
+              class="chat-icon"
+              src="/src/assets/images/chat-icon.svg"
+              alt="icone de chat para conversação"
+            />
+          </a>
+          <a href="/src/pages/error/index.html">
+            <img
+              id="dark-theme-lens"
+              class="lens-icon"
+              src="/src/assets/images/lens-icon.svg"
+              alt="icone de lupa para pesquisa"
+            />
+          </a>
+        </div>
       </div>
     </footer>
+    <script src="/src/scripts/script.js"></script>
   </body>
 </html>
