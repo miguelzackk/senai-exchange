@@ -1,102 +1,144 @@
-const toggle = document.getElementById("tema-escuro-toggle");
-const tema = document.getElementById("tema");
-const perfilIcon = document.getElementById("perfil-icon");
-const logoSenai = document.getElementById("logo-senai");
+document.addEventListener("DOMContentLoaded", () => {
+  //  Alternar Tema Escuro / Claro
+  const perfilIcon = document.getElementById("perfil-icon");
+  const logoSenai = document.getElementById("logo-senai");
+  const temaIcon = document.getElementById("tema");
+  const temaBtn = document.getElementById("tema-escuro-toggle");
+  const homeIcon = document.getElementById("dark-theme-home");
+  const bellIcon = document.getElementById("dark-theme-bell");
+  const chatIcon = document.getElementById("dark-theme-chat");
+  const lensIcon = document.getElementById("dark-theme-lens");
 
-const hpTrianglePointer = document.getElementById("helpPageTrianglePointer");
-const homeIcon = document.getElementById("dark-theme-home");
-const bellIcon = document.getElementById("dark-theme-bell");
-const chatIcon = document.getElementById("dark-theme-chat");
-const lensIcon = document.getElementById("dark-theme-lens");
-const questionIcon = document.querySelector(".dark-theme-question");
-const bookIcon = document.getElementById("dark-theme-book");
-const pencilIcon = document.getElementById("dark-theme-pencil");
-const searchIcon = document.getElementById("dark-theme-search");
-const tagIcon = document.getElementById("dark-theme-tag");
-const lockIcon = document.getElementById("dark-theme-lock");
+  // Função para alternar tema escuro
+  function alternarTema() {
+    document.body.classList.toggle("dark-mode");
+    const darkMode = document.body.classList.contains("dark-mode");
 
-toggle.addEventListener("click", () => {
-  document.body.classList.toggle("dark-mode");
-  const darkMode = document.body.classList.contains("dark-mode");
+    // Ícones do topo
+    if (temaIcon)
+      temaIcon.src = darkMode
+        ? "/src/assets/images/sun-white-icon.svg"
+        : "/src/assets/images/moon-icon.svg";
+    if (perfilIcon)
+      perfilIcon.src = darkMode
+        ? "/src/assets/images/perfil-white-icon.svg"
+        : "/src/assets/images/perfil.svg";
+    if (logoSenai)
+      logoSenai.src = darkMode
+        ? "/src/assets/images/logo-mini-white.svg"
+        : "/src/assets/images/logo-mini.svg";
 
-  // -- Top Menu --
-  tema.src = darkMode
-    ? "/src/assets/images/sun-white-icon.svg"
-    : "/src/assets/images/moon-icon.svg";
+    // Ícones da navbar inferior
+    if (homeIcon)
+      homeIcon.src = darkMode
+        ? "/src/assets/images/home-white-icon.svg"
+        : "/src/assets/images/home-icon.svg";
+    if (bellIcon)
+      bellIcon.src = darkMode
+        ? "/src/assets/images/bell-white-icon.svg"
+        : "/src/assets/images/bell-icon.svg";
+    if (chatIcon)
+      chatIcon.src = darkMode
+        ? "/src/assets/images/chat-white-icon.svg"
+        : "/src/assets/images/chat-icon.svg";
+    if (lensIcon)
+      lensIcon.src = darkMode
+        ? "/src/assets/images/lens-white-icon.svg"
+        : "/src/assets/images/lens-icon.svg";
+  }
 
-  perfilIcon.src = darkMode
-    ? "/src/assets/images/perfil-white-icon.svg"
-    : "/src/assets/images/perfil.svg";
-
-  logoSenai.src = darkMode
-    ? "/src/assets/images/logo-mini-white.svg"
-    : "/src/assets/images/logo-mini.svg";
-
-    // -- Help Page About --
-  if (hpTrianglePointer)
-    hpTrianglePointer.src = darkMode
-      ? "/src/assets/images/white-trianglePointer-icon.svg"
-      : "/src/assets/images/trianglePointer-icon.svg";
-
-    // -- Navigation Bar --
-  if (homeIcon)
-    homeIcon.src = darkMode
-      ? "/src/assets/images/home-white-icon.svg"
-      : "/src/assets/images/home-icon.svg";
-
-  if (bellIcon)
-    bellIcon.src = darkMode
-      ? "/src/assets/images/bell-white-icon.svg"
-      : "/src/assets/images/bell-icon.svg";
-
-  if (chatIcon)
-    chatIcon.src = darkMode
-      ? "/src/assets/images/chat-white-icon.svg"
-      : "/src/assets/images/chat-icon.svg";
-
-  if (lensIcon)
-    lensIcon.src = darkMode
-      ? "/src/assets/images/lens-white-icon.svg"
-      : "/src/assets/images/lens-icon.svg";
-
-      // -- Help Page Service --
-  if (questionIcon)
-    questionIcon.src = darkMode
-      ? "/src/assets/images/question-white-icon.svg"
-      : "/src/assets/images/question-icon.svg";
-
-  if (bookIcon)
-    bookIcon.src = darkMode
-      ? "/src/assets/images/book-white-icon.svg"
-      : "/src/assets/images/book-icon.svg";
-
-  if (pencilIcon)
-    pencilIcon.src = darkMode
-      ? "/src/assets/images/pencil-white-icon.svg"
-      : "/src/assets/images/pencil-icon.svg";
-
-  if (searchIcon)
-    searchIcon.src = darkMode
-      ? "/src/assets/images/lens-white-icon.svg"
-      : "/src/assets/images/search-icon.svg";
-
-	// -- Tags Page --
-  if (tagIcon)
-    tagIcon.src = darkMode
-      ? "/src/assets/images/tag-white-icon.svg"
-      : "/src/assets/images/tag-icon.svg";
-
-	// -- Privacy Policy Page --
-  if (lockIcon)
-    lockIcon.src = darkMode
-      ? "/src/assets/images/lock-white-icon.svg"
-      : "/src/assets/images/lock-icon.svg";
-
-  tema.alt = darkMode ? "Tema Claro" : "Tema Escuro";
-  perfilIcon.alt = darkMode ? "Perfil (tema escuro)" : "Perfil";
-  logoSenai.alt = darkMode ? "Logo SENAI (tema escuro)" : "Logo SENAI";
+  if (temaBtn) {
+    temaBtn.addEventListener("click", alternarTema);
+  }
 
 
+  //  suport icon -> Página "Sobre"
+  const lampBtn = document.getElementById("lamp-btn");
+  if (lampBtn) {
+    lampBtn.addEventListener("click", () => {
+      window.location.href = "/src/pages/helpPageAbout/helpPageAbout.html";
+    });
+  }
+
+  //  Sidebar
+const sidebar = document.getElementById("sidebar");
+const overlay = document.getElementById("overlay");
+const perfilBtn = document.getElementById("perfil-btn");
+
+if (perfilBtn && sidebar && overlay) {
+  perfilBtn.addEventListener("click", () => {
+    sidebar.classList.add("open");
+    overlay.classList.add("active");
+  });
+}
+
+// Fecha ao clicar fora
+if (overlay) {
+  overlay.addEventListener("click", () => {
+    sidebar.classList.remove("open");
+    overlay.classList.remove("active");
+  });
+}
+  // Pesquisa (filtros, limpar etc.)
+  const searchInput = document.getElementById("searchInput");
+  const clearBtn = document.querySelector(".clear-search");
+  const recentList = document.getElementById("recentList");
+
+  // Função de filtro reutilizável
+  function filterUsers(text) {
+    if (!recentList) return;
+    const q = (text || "").toLowerCase().trim();
+    const users = recentList.querySelectorAll(".user-card");
+    users.forEach((u) => {
+      const name = (u.dataset.name || u.textContent || "").toLowerCase();
+      u.style.display = q === "" ? "flex" : name.includes(q) ? "flex" : "none";
+    });
+  }
+
+  if (searchInput) {
+    searchInput.addEventListener("input", () => {
+      const has = searchInput.value.trim().length > 0;
+      if (clearBtn) clearBtn.style.display = has ? "inline-flex" : "none";
+      filterUsers(searchInput.value);
+    });
+    if (clearBtn) clearBtn.style.display = "none";
+  }
+
+  if (clearBtn) {
+    clearBtn.addEventListener("click", () => {
+      if (searchInput) {
+        searchInput.value = "";
+        searchInput.focus();
+      }
+      clearBtn.style.display = "none";
+      filterUsers("");
+    });
+  }
+
+  // Clicar na linha da pesquisa copia texto
+  const lineAction = document.getElementById("submit-line");
+  const lineLeft = document.querySelector(".search-line-left");
+  if (lineAction && lineLeft && searchInput) {
+    lineAction.addEventListener("click", () => {
+      searchInput.value = lineLeft.textContent.trim();
+      searchInput.dispatchEvent(new Event("input"));
+    });
+  }
+
+  // Remover itens com animação
+  document.querySelectorAll(".remove-search").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const item = btn.closest(".user-card, .search-item");
+      if (!item) return;
+      item.style.transition = "all 0.28s ease";
+      item.style.opacity = "0";
+      item.style.height = "0";
+      item.style.margin = "0";
+      item.style.padding = "0";
+      setTimeout(() => item.remove(), 300);
+    });
+  });
+
+  // Inicializa com todos visíveis
+  filterUsers("");
 });
-
-
