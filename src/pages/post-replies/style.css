@@ -1,248 +1,248 @@
 /* || Page styles */
 
 main {
-	display: flex;
-	flex-direction: column;
-	padding: 10px 0px;
-	gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0px;
+  gap: 10px;
 }
 
 button {
-	cursor: pointer;
+  cursor: pointer;
 }
 
 /* || Type new reply */
 
 .new-reply-container {
-	display: flex;
-	flex-direction: column;
-	padding: 10px 16px;
-	gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  gap: 10px;
 }
 
 .new-reply-container img {
-	width: 18px;
-	height: 18px;
+  width: 18px;
+  height: 18px;
 }
 
 .formatting-options {
-	border-bottom: 1px solid var(--white-background-color);
-	display: flex;
-	padding: 10px;
-	gap: 10px;
+  border-bottom: 1px solid var(--white-background-color);
+  display: flex;
+  padding: 10px;
+  gap: 10px;
 }
 
 #other-options {
-	margin-left: auto;
+  margin-left: auto;
 }
 
 .type-new-reply-box {
-	border: 1px solid var(--white-background-color);
-	border-radius: 8px;
-	padding: 10px;
+  border: 1px solid var(--white-background-color);
+  border-radius: 8px;
+  padding: 10px;
 }
 
 textarea::placeholder {
-	color: #C3C3C3;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
+  color: #c3c3c3;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 textarea {
-	color: var(--black-tertiary-color);
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 500;
+  color: var(--black-tertiary-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
 
-	min-width: 100%;
-	max-width: 100%;
-	min-height: 60px;
+  min-width: 100%;
+  max-width: 100%;
+  min-height: 60px;
 
-	/* Hide the box outline when selected */
-	outline: none;
+  /* Hide the box outline when selected */
+  outline: none;
 
-	/* Adjust the height as the text is being typed */
-	/* Not supported by all browsers */
-	field-sizing: content;
+  /* Adjust the height as the text is being typed */
+  /* Not supported by all browsers */
+  field-sizing: content;
 }
 
 .new-reply-buttons {
-	display: flex;
-	justify-content: flex-end;
-	gap: 14px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 14px;
 }
 
 .new-reply-buttons > button {
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 500;
-	padding: 4px 12px;
-	border-radius: 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 4px 12px;
+  border-radius: 10px;
 }
 
 #post-reply-button {
-	color: var(--white-secundary-color);
-	background-color: var(--red-primary-color);
+  color: var(--white-secundary-color);
+  background-color: var(--red-primary-color);
 }
 
 #cancel-reply-button {
-	color: #3D3D3D;
-	background-color: var(--white-background-color);
+  color: #3d3d3d;
+  background-color: var(--white-background-color);
 }
 
 /* || Replies section */
 
 .replies-section {
-	display: flex;
-	flex-direction: column;
-	padding: 10px 16px;
-	gap: 10px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 16px;
+  gap: 10px;
 }
 
 .single-reply {
-	border-top: 1px solid var(--gray-line-color);
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	padding: 0px 8px;
+  border-top: 1px solid var(--gray-line-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 8px;
 }
 
 .reply-header {
-	border-bottom: 1px solid var(--gray-placeholder-color);
-	display: flex;
-	padding: 10px 0px;
-	gap: 10px;
+  border-bottom: 1px solid var(--gray-placeholder-color);
+  display: flex;
+  padding: 10px 0px;
+  gap: 10px;
 }
 
 .profile-picture > img {
-	width: 32px;
-	height: 32px;
-	clip-path: circle();
+  width: 32px;
+  height: 32px;
+  clip-path: circle();
 }
 
 .reply-info-container {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	gap: 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4px;
 }
 
 .user-info {
-	display: flex;
-	gap: 10px;
+  display: flex;
+  gap: 10px;
 }
 
 .user-info > h2 {
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 700;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
 }
 
 .user-info > button {
-	color: var(--white-secundary-color);
-	background-color: var(--red-primary-color);
-	font-size: 8px;
-	font-style: normal;
-	font-weight: 400;
-	border-radius: 15px;
-	display: flex;
-	align-items: center;
-	padding: 2px 12px;
+  color: var(--white-secundary-color);
+  background-color: var(--red-primary-color);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  padding: 2px 12px;
 }
 
 .reply-info-container p {
-	font-size: 8px;
-	font-style: normal;
-	font-weight: 300;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 300;
 }
 
 .reply-options {
-	display: flex;
-	align-self: center;
-	margin-left: auto;
-	gap: 10px;
+  display: flex;
+  align-self: center;
+  margin-left: auto;
+  gap: 10px;
 }
 
 .reply-content > p {
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 400;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
 }
 
 .reply-reactions {
-	display: flex;
-	gap: 4px;
+  display: flex;
+  gap: 4px;
 }
 
 .reaction-buttons {
-	color: var(--black-tertiary-color);
-	background-color: var(--white-background-color);
-	border-radius: 8px;
-	font-size: 8px;
-	font-style: normal;
-	font-weight: 400;
-	padding: 2px 8px;
-	display: flex;
-	align-items: center;
-	gap: 4px;
+  color: var(--black-tertiary-color);
+  background-color: var(--white-background-color);
+  border-radius: 8px;
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 400;
+  padding: 2px 8px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
 }
 
 .reaction-buttons > img {
-	width: 16px;
-	height: 16px;
+  width: 16px;
+  height: 16px;
 }
 
 #answer-button {
-	color: var(--white-secundary-color);
-	background-color: var(--red-primary-color);
-	border-radius: 10px;
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 500;
-	padding: 4px 12px;
-	margin-left: auto;
+  color: var(--white-secundary-color);
+  background-color: var(--red-primary-color);
+  border-radius: 10px;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  padding: 4px 12px;
+  margin-left: auto;
 }
 
 #check-replies-button {
-	color: var(--red-primary-color);
-	font-size: 12px;
-	font-style: normal;
-	font-weight: 500;
-	margin-left: auto;
+  color: var(--red-primary-color);
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  margin-left: auto;
 }
 
 /* || Nested reply */
 
 .nested-reply {
-	border-left: 1px solid var(--gray-line-color);
-	display: flex;
-	flex-direction: column;
-	gap: 10px;
-	padding: 0px 8px;
-	margin-left: 8px;
+  border-left: 1px solid var(--gray-line-color);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 0px 8px;
+  margin-left: 8px;
 }
 
 .nested-reply .user-info {
-	display: flex;
-	gap: 4px;
+  display: flex;
+  gap: 4px;
 }
 
 /* || Default profile picture */
 
 .profile-picture-stroke {
-	border: 1px solid var(--dark-surface-color);
-	width: 32px;
-	height: 32px;
-	border-radius: 50%;
-	display: flex;
-	justify-content: center;
-	align-items: center;
+  border: 1px solid var(--dark-surface-color);
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 #default-profile-picture {
-	width: 24px;
-	height: 24px;
+  width: 24px;
+  height: 24px;
 }
 
 /* || Dark mode styles */
@@ -250,21 +250,26 @@ textarea {
 body.dark-mode .formatting-options img,
 body.dark-mode .reply-options img,
 body.dark-mode #default-profile-picture {
-	filter: invert(1);
+  filter: invert(1);
 }
 
 body.dark-mode h2 {
-	color: var(--white-secundary-color);
+  color: var(--white-secundary-color);
 }
 
 body.dark-mode p {
-	color: var(--white-secundary-color);
+  color: var(--white-secundary-color);
 }
 
 body.dark-mode textarea {
-	color: var(--white-secundary-color);
+  color: var(--white-secundary-color);
 }
 
 body.dark-mode .profile-picture-stroke {
-	border: 1px solid var(--white-secundary-color);
+  border: 1px solid var(--white-secundary-color);
+}
+
+body.dark-mode .user-profile p {
+  color: #515151 !important;
+  filter: none !important;
 }
